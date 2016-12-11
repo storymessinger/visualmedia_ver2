@@ -1,0 +1,39 @@
+#carousel.section
+    .container
+        .row
+            .col-md-8.col-md-offset-2
+                // Carousel Card
+                .card.card-raised.card-carousel
+                    #carousel-example-generic.carousel.slide(data-ride='carousel')
+                        .carousel.slide(data-ride='carousel')
+                            // Indicators
+                            ol.carousel-indicators
+                                li.active(data-target='#carousel-example-generic', data-slide-to='0')
+                                li(data-target='#carousel-example-generic', data-slide-to='1')
+                                li(data-target='#carousel-example-generic', data-slide-to='2')
+                            // Wrapper for slides
+                            .carousel-inner
+                                .item.active
+                                    img(src='img/bg2.jpeg', alt='Awesome Image')
+                                    .carousel-caption
+                                        h4
+                                            i.material-icons location_on
+                                            |  Yellowstone National Park, United States
+                                .item
+                                    img(src='img/bg3.jpeg', alt='Awesome Image')
+                                    .carousel-caption
+                                        h4
+                                            i.material-icons location_on
+                                            |  Somewhere Beyond, United States
+                                .item
+                                    img(src='img/bg4.jpeg', alt='Awesome Image')
+                                    .carousel-caption
+                                        h4
+                                            i.material-icons location_on
+                                            |  Yellowstone National Park, United States
+                            // Controls
+                            a.left.carousel-control(href='#carousel-example-generic', data-slide='prev')
+                                i.material-icons keyboard_arrow_left
+                            a.right.carousel-control(href='#carousel-example-generic', data-slide='next')
+                                i.material-icons keyboard_arrow_right
+                // End Carousel Card
