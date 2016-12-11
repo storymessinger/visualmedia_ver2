@@ -1,0 +1,6 @@
+# ignore source files which do not relate in actual developing
+# below is files related to Grunt
+Gruntfile.js
+GruntConfig.yml
+node_modules/*
+

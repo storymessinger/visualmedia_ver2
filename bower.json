@@ -1,0 +1,24 @@
+{
+  "name": "visualmedia_ver2",
+  "description": "website for visualmedialab 2017 spring",
+  "main": "app.js",
+  "authors": [
+    "JUN"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "visualmedia"
+  ],
+  "homepage": "https://github.com/storymessinger/visualmedia_ver2",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}
