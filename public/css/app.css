@@ -2,7 +2,7 @@
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/twbs/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -5813,3 +5813,60 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+
+.main {
+  margin-left: -15px;
+  margin-right: -15px; }
+  .main:before, .main:after {
+    content: " ";
+    display: table; }
+  .main:after {
+    clear: both; }
+  .main .sidebar {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: red; }
+    @media (min-width: 768px) {
+      .main .sidebar {
+        float: left;
+        width: 50%; } }
+    @media (min-width: 992px) {
+      .main .sidebar {
+        float: left;
+        width: 33.33333%; } }
+  .main .content {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: green; }
+    @media (min-width: 768px) {
+      .main .content {
+        float: left;
+        width: 50%; } }
+    @media (min-width: 992px) {
+      .main .content {
+        float: left;
+        width: 66.66667%; } }

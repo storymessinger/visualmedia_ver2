@@ -2,20 +2,19 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 
 var config = {
-    bootstrapDir: './bower_components/bootstrap-sass',
     publicDir: './public',
 };
 
 gulp.task('css', function() {
-    return gulp.src('./public/sass/app.scss')
+    return gulp.src(config.publicDir + '/css/app.scss')
     .pipe(sass({
-        includePaths: [config.bootstrapDir + '/assets/stylesheets'],
+        includePaths: [config.publicDir],
     }))
     .pipe(gulp.dest(config.publicDir + '/css'));
 });
 
 gulp.task('fonts', function() {
-    return gulp.src(config.bootstrapDir + '/assets/fonts/**/*')
+    return gulp.src(config.publicDir + '/fonts/**/*')
     .pipe(gulp.dest(config.publicDir + '/fonts'));
 });
 

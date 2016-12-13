@@ -2,22 +2,22 @@ doctype html
 html
     include includes/head.pug
     body
-        include components/navbar_2.pug
-        
-        main.main2
+        div.container
+            div.main
+                div.sidebar Sidebar content
+                div.content Article content
+        main
             h1 Welcome to the visual media lab website
             p
                 | test #1
             p
                 | test #2
-            .wrapper    
+            .wrapper
                 .main
                     include components/carousel.pug
-            
+
         .footer
             .footer-left
-                .footer-logo
-                    img(src='img/Logo_footer.svg')
                 .footer-contact
                     span Contact us
                     br
@@ -27,7 +27,7 @@ html
                     br
                     | 373-1 Guseong-dong, Yuseong-gu Daejeon, 305-701, Republic of Korea
 
-   
-            
-        
+
+
+
     include includes/tail.pug

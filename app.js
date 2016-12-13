@@ -22,6 +22,6 @@ app.use('/p1',p1);
 var p2 = require('./routes/p2');
 app.use('/p2',p2);*/
 
-app.listen(3003, function(){
-    console.log('connected to 3003 port');
+app.listen(3004, function(){
+    console.log('connected to 3004 port');
 })
