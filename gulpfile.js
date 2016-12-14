@@ -6,7 +6,7 @@ var config = {
 };
 
 gulp.task('css', function() {
-    return gulp.src(config.publicDir + '/css/app.scss')
+    return gulp.src(config.publicDir + '/css/compile.scss')
     .pipe(sass({
         includePaths: [config.publicDir],
     }))

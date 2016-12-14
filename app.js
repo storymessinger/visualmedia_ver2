@@ -24,4 +24,4 @@ app.use('/p2',p2);*/
 
 app.listen(3004, function(){
     console.log('connected to 3004 port');
-})
+});

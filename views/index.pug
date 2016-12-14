@@ -1,33 +1,122 @@
 doctype html
 html
     include includes/head.pug
-    body
-        div.container
-            div.main
-                div.sidebar Sidebar content
-                div.content Article content
-        main
-            h1 Welcome to the visual media lab website
-            p
-                | test #1
-            p
-                | test #2
-            .wrapper
-                .main
-                    include components/carousel.pug
+    link(href="css/page/index.min.css" rel="stylesheet")
+    body.container-fluid
+        nav.row.navbar.navbar-static-top.navbar-default
+            div.container-fluid
+                // Brand and toggle get grouped for better mobile display
+                .navbar-header
+                    button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href='#')
+                        img(alt="Brand" src="img/logo_h100.svg")
+                // Collect the nav links, forms, and other content for toggling
+                #bs-example-navbar-collapseDropdown-1.collapse.navbar-collapse
+                    form(action='#').navbar-left
+                        .mdl-textfield.mdl-js-textfield.mdl-textfield--expandable
+                            label.mdl-button.mdl-js-button.mdl-button--icon(for='sample6')
+                                i.material-icons search
+                            .mdl-textfield__expandable-holder
+                                input#sample6.mdl-textfield__input(type='text')
+                                label.mdl-textfield__label(for='sample-expandable') Expandable Input
+                    form.navbar-form.navbar-right
+                        .form-group
+                            input.form-control(type='text', placeholder='Search')
+                        button.btn.btn-default(type='submit') Submit
+                    ul.nav.navbar-nav.navbar-right
+                        li.active
+                            a(href='#')
+                                | About
+                                span.sr-only (current)
+                        li
+                            a(href='#') People
+                        li.dropdown
+                            a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                                | Research
+                                span.caret
+                            ul.dropdown-menu
+                                li
+                                    a(href='#') Action
+                                li
+                                    a(href='#') Another action
+                                li
+                                    a(href='#') Something else here
+                                li.divider(role='separator')
+                                li
+                                    a(href='#') Separated link
+                                li.divider(role='separator')
+                                li
+                                    a(href='#') One more separated link
+                        li
+                            a(href='#') News&Events
+                        li.dropdown
+                            a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                                | Archives
+                                span.caret
+                            ul.dropdown-menu
+                                li
+                                    a(href='#') Action
+                                li
+                                    a(href='#') Another action
+                                li
+                                    a(href='#') Something else here
+                                li.divider(role='separator')
+                                li
+                                    a(href='#') Separated link
+        div.main.row
 
-        .footer
-            .footer-left
-                .footer-contact
-                    span Contact us
-                    br
-                    | +82-42-350-5918
-                    br
-                    | viusalmedia@kaist.ac.kr
-                    br
-                    | 373-1 Guseong-dong, Yuseong-gu Daejeon, 305-701, Republic of Korea
+            div.sidebar.col-md-2.container-fluid.green
+                div.row.list-group
+                    p.list-group-item
+                        | Projects
+                    a.list-group-item(href='#') Ongoing Projects
+                    a.list-group-item(href='#') Finished Projects
+                    p.list-group-item
+                        | Publications
+
+
+            div.content.col-md-10.col-md-offset-2.container-fluid
+                ol.row.breadcrumb
+                    li
+                        a(href="#") Home
+                    li
+                        a(href="#") People
+                    li
+                        a(href="#") Students
+
+                div.row.project-box
+                    div.col-md-5.panel.panel-default.red
+                        div.panel-heading Mulit-projection Project
+                        div.panel-body
+                            div.project-list.red
+                                p Full name :
+
+                            div.project-desc
+                                p Development of Realistic Media and Presentation System for large Auditorium
+                        button.more.btn.btn-default(type='button') More
 
 
 
+                    div.col-md-4.panel.panel-default.blue
+                        div.panel-body
+                        | Panel content
+                    div.col-md-3.panel.panel-default.green
+                        div.panel-body
+                        | Panel content
+                div.row.project-box
+                    div.col-md-5.panel.panel-default.red
+                        div.panel-body
+                        | Panel content
+                    div.col-md-4.panel.panel-default.blue
+                        div.panel-body
+                        | Panel content
+                    div.col-md-3.panel.panel-default.green
+                        div.panel-body
+                        | Panel content
 
     include includes/tail.pug
+    acript(src='js/vml_index.js', type='text/javascript')

@@ -5870,3 +5870,12 @@ button.close {
       .main .content {
         float: left;
         width: 66.66667%; } }
+
+.blue {
+  background-color: blue; }
+
+.red {
+  background-color: red; }
+
+.green {
+  background-color: green; }
