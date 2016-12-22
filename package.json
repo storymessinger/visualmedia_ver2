@@ -33,6 +33,7 @@
     "mysql": "^2.12.0",
     "node": "0.0.0",
     "node-mysql": "^0.4.2",
+    "node-sass": "^4.1.1",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "pbkdf2-password": "^1.2.1",
