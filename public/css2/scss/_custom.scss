@@ -4,11 +4,31 @@
 // without modifying source files.
 
 
-
+// 폰트 기본 사이즈 16에서 14로
 $font-size-root: 14px;
 
+// 주요색깔
 $brand-primary:             #F05A29;
 $brand-success:             #5cb85c !default;
 $brand-info:                #5bc0de !default;
 $brand-warning:             #f0ad4e !default;
 $brand-danger:              #d9534f !default;
+
+// dropdown matching to the navbar height
+$dropdown-padding-y:             .5rem;
+$dropdown-margin-top:            2.25rem;
+
+// breadcrumbs
+$breadcrumb-bg:                 $brand-primary;
+$breadcrumb-divider-color:      white;
+// $breadcrumb-active-color:       $gray-light !default;
+$breadcrumb-divider:            "/" !default;
+
+// 박스의 fillet 없애기
+$border-radius:          0rem;
+$border-radius-lg:       0rem;
+$border-radius-sm:       0rem;
+
+// 리스트 그룹 active 색깔
+$list-group-active-color:       $brand-primary;
+$list-group-active-bg:          rgba(0,0,0,0);

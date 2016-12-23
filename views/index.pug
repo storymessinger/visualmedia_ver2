@@ -3,9 +3,9 @@ html
     include includes/head.pug
     link(href="css2/page/index.min.css" rel="stylesheet")
     body.container-fluid
-        nav.navbar.navbar-light
+        nav.navbar.navbar-light.navbar-fixed-top
             a.navbar-brand(href='#')
-                img(alt="Brand" src="img/logo-h100.svg" width="100")
+                img(alt="Brand" src="img/logo-h100.svg" width="130")
                 //- button.navbar-toggler(type='button' data-toggle="collapse" data-target="#exCollapsingNavbar")
                     div#exCollapsingNavbar.collapse
                         div.bg-inverse.text-muted.p-1
@@ -18,82 +18,70 @@ html
                         span.sr-only (current)
                 li.nav-item
                     a.nav-link(href='#') People
-                li.nav-item.dropdown
-                    a.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                        | Research
-                        span.caret
-                    ul.dropdown-menu
-                        a.dropdown-item(href='#') Action
-                        a.dropdown-item(href='#') Another action
-                        a.dropdown-item(href='#') Something else here
-                        a.dropdown-item(href='#') Separated link
-                        a.dropdown-item(href='#') One more separated link
+                li.nav-item
+                    a.nav-link(href='#') Research
                 li.nav-item
                     a.nav-link(href='#') News&Events
-                li.nav-item.dropdown
-                    a.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                        | Archives
-                        span.caret
-                    .dropdown-menu
-                        a.dropdown-item(href='#') Action
-                        a.dropdown-item(href='#') Another action
-                        a.dropdown-item(href='#') Something else here
-                        a.dropdown-item.divider(role='separator')
-                        a.dropdown-item(href='#') Separated link
-            form.form-inline
-                input.form-control(type='text', placeholder='Search')
-                button.btn.align-middle.btn-outline-secondary(type='submit') Search
+                li.nav-item
+                    a.nav-link(href='#') Archives
+            //- form.form-inline
+            //-     button.btn.align-middle.btn-outline-secondary(type='submit') Search
 
     div.main.row
 
-        div.sidebar.col-md-2.container-fluid.green
+        div.sidebar
             div.row.list-group
-                p.list-group-item
-                    | Projects
-                a.list-group-item(href='#') Ongoing Projects
-                a.list-group-item(href='#') Finished Projects
-                p.list-group-item
-                    | Publications
+                li.list-group-item.list-group-item-action.projects Projects
+                a.list-group-item.list-group-item-action.item_projects(href='#') Ongoing Projects
+                a.list-group-item.list-group-item-action.item_projects(href='#') Finished Projects
+                li.list-group-item.publications Publications
+                a.list-group-item.list-group-item-action.item_publications(href='#') Ongoing Projects
+                a.list-group-item.list-group-item-action.item_publications(href='#') Finished Projects
 
 
-        div.content.col-md-10.col-md-offset-2.container-fluid
+        div.content.col-xs.container-fluid
             ol.row.breadcrumb
-                li
+                li.breadcrumb-item.active
                     a(href="#") Home
-                li
+                li.breadcrumb-item.active
                     a(href="#") People
-                li
+                li.breadcrumb-item
                     a(href="#") Students
 
             div.row.project-box
-                div.col-md-5.panel.panel-default.red
-                    div.panel-heading Mulit-projection Project
-                    div.panel-body
-                        div.project-list.red
-                            p Full name :
+                div.row.col-xs-12.panel-heading
+                    div Mulit-projection Project
+                div.col-md-5.panel-body.about
+                    p Full name :
+                    div.project-list
+                        p Full name :
+                        p Full name :
+                        p Full name :
+                    div.project-desc
+                        p Development of Realistic Media and Presentation System for large Auditorium
+                        p Development of Realistic Media and Presentation System for large Auditorium
+                        p Development of Realistic Media and Presentation System for large Auditorium
+                div.col-md-4.panel-body
+                    img.img-fluid.img-thumbnail(src="img/project_img_01-650.jpg")
+                div.col-md-3.panel-body
+                    | Panel content
+                div.row.col-xs-12.panel-footer
+                    button.btn.btn-primary.btn-sm(type='button') More
 
-                        div.project-desc
-                            p Development of Realistic Media and Presentation System for large Auditorium
-                    button.more.btn.btn-default(type='button') More
 
 
 
-                div.col-md-4.panel.panel-default.blue
+
+
+            div.row.project-box.red
+                div.col-md-5.panel.panel-default
                     div.panel-body
                     | Panel content
-                div.col-md-3.panel.panel-default.green
+                div.col-md-4.panel.panel-default
                     div.panel-body
                     | Panel content
-            div.row.project-box
-                div.col-md-5.panel.panel-default.red
-                    div.panel-body
-                    | Panel content
-                div.col-md-4.panel.panel-default.blue
-                    div.panel-body
-                    | Panel content
-                div.col-md-3.panel.panel-default.green
+                div.col-md-3.panel.panel-default
                     div.panel-body
                     | Panel content
 
     include includes/tail.pug
-    //- acript(src='js2/vml_index.js', type='text/javascript')
