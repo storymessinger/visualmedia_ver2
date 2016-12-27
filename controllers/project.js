@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Project = require('../models/project_db');
+// var Project = require('../models/project_db');
 
 router.get('/:id', function(req, res) {
 
