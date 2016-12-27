@@ -1,0 +1,40 @@
+doctype html
+html
+    include includes/head.pug
+
+    block css
+
+    body.container-fluid
+        nav.navbar.navbar-light.navbar-fixed-top
+            a.navbar-brand(href='#')
+                img(alt="Brand" src="img/logo-h100.svg" width="130")
+                //- button.navbar-toggler(type='button' data-toggle="collapse" data-target="#exCollapsingNavbar")
+                    div#exCollapsingNavbar.collapse
+                        div.bg-inverse.text-muted.p-1
+                            h4 Collapsed content
+                            span.text-muted Toggleable via the navbar brand.
+            ul.nav.navbar-nav
+                li.nav-item.active
+                    a.nav-link(href='#')
+                        | About
+                        span.sr-only (current)
+                li.nav-item
+                    a.nav-link(href='#') People
+                li.nav-item
+                    a.nav-link(href='#') Research
+                li.nav-item
+                    a.nav-link(href='#') News&Events
+                li.nav-item
+                    a.nav-link(href='#') Archives
+            //- form.form-inline
+            //-     button.btn.align-middle.btn-outline-secondary(type='submit') Search
+
+        div.main.row
+
+            block sidebar
+
+            block content
+
+    include includes/tail.pug
+
+    block js

@@ -1,0 +1,129 @@
+//
+@import 'base';
+
+// @import "index_576";
+@import "index_992";
+
+.sidebar {
+    min-height: 100%;
+    height: 100%;
+    width: 13rem;
+    border-right: 1px solid #eee;
+    // list-group-item-active와 sidebar를 맞추려고 패딩오른쪽줌
+    padding-right: 1rem;
+
+    li {
+        height: 5rem;
+        padding-top: 1.8rem;
+        width: 100%;
+        font-weight: 600;
+        padding-left: 3rem;
+        cursor: pointer;
+    }
+
+    a {
+        height: 4rem;
+        padding-top: 1.1rem;
+        width: 100%;
+        padding-left: 4rem;
+    }
+}
+
+.content {
+    padding: 0;
+}
+
+.breadcrumb {
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+    a {
+        color: #fff;
+    }
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.project-box {
+    margin: 2rem 3rem 3rem;
+    border-top: 1px solid #ccc;
+
+    .card-box {
+        padding: 0 0.5rem;
+
+        .card {
+            height: 25rem;
+            position: relative;
+            overflow: hidden;
+
+            span {
+                font-size: 0.6rem;
+            }
+
+            .project-img {
+                position: absolute;
+                // top: -9999px;
+                // bottom: -9999px;
+                left: -9999px;
+                right: -9999px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    .card-person {
+        display: flex;
+        flex-flow: column;
+        .student-img {
+        }
+    }
+
+
+    .panel-heading {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 1rem 0 2.5rem 0.5rem;
+        font-size: 2rem;
+    }
+    //
+    // .panel-footer {
+    //     button {
+    //         padding-left: 2rem;
+    //         padding-right: 2rem;
+    //     }
+    // }
+    //
+    // .panel-body {
+    //     padding: 3rem 0;
+    //     position: relative;
+    //     height: 70%;
+    //
+    //     .project-list {
+    //         height: 100%;
+    //         width: 100px;
+    //         position: absolute;
+    //         left: 0;
+    //         display: flex;
+    //         flex-flow: column;
+    //
+    //         p {
+    //             // text-align: right;
+    //             height: 2rem;
+    //         }
+    //     }
+    //
+    //     .project-desc {
+    //         height: 100%;
+    //         position: static;
+    //         margin-left: 100px;
+    //         display: flex;
+    //         flex-flow: column;
+    //
+    //         p {
+    //             height: 2rem;
+    //         }
+    //     }
+    // }
+}

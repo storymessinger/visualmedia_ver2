@@ -1,0 +1,146 @@
+doctype html
+html
+    include includes/head.pug
+    link(href="css2/page/index.min.css" rel="stylesheet")
+    body.container-fluid
+        nav.navbar.navbar-light.navbar-fixed-top
+            a.navbar-brand(href='#')
+                img(alt="Brand" src="img/logo-h100.svg" width="130")
+                //- button.navbar-toggler(type='button' data-toggle="collapse" data-target="#exCollapsingNavbar")
+                    div#exCollapsingNavbar.collapse
+                        div.bg-inverse.text-muted.p-1
+                            h4 Collapsed content
+                            span.text-muted Toggleable via the navbar brand.
+            ul.nav.navbar-nav
+                li.nav-item.active
+                    a.nav-link(href='#')
+                        | About
+                        span.sr-only (current)
+                li.nav-item
+                    a.nav-link(href='#') People
+                li.nav-item
+                    a.nav-link(href='#') Research
+                li.nav-item
+                    a.nav-link(href='#') News&Events
+                li.nav-item
+                    a.nav-link(href='#') Archives
+            //- form.form-inline
+            //-     button.btn.align-middle.btn-outline-secondary(type='submit') Search
+
+    div.main.row
+
+        div.sidebar
+            div.row.list-group
+                li.list-group-item.list-group-item-action.projects Projects
+                a.list-group-item.list-group-item-action.item_projects(href='#') Ongoing Projects
+                a.list-group-item.list-group-item-action.item_projects(href='#') Finished Projects
+                li.list-group-item.publications Publications
+                a.list-group-item.list-group-item-action.item_publications(href='#') Ongoing Projects
+                a.list-group-item.list-group-item-action.item_publications(href='#') Finished Projects
+
+
+        div.content.col-xs.container-fluid
+            ol.row.breadcrumb
+                li.breadcrumb-item.active
+                    a(href="#") Home
+                li.breadcrumb-item.active
+                    a(href="#") People
+                li.breadcrumb-item
+                    a(href="#") Students
+
+            div.row.project-box
+                div.col-sm-12.panel-heading
+                    div Mulit-projection Project
+                div.col-sm-5.col-lg-4.card-box
+                    div.card
+                        div.card-header About
+                        div.card-block
+                            h5.card-text
+                                //- span (Full name) <br />
+                                | Development of Realistic Media and Presentation System for large Auditorium
+                            p.card-text
+                                span (Team) <br />
+                                | Eve
+                            p.card-text
+                                span (Area) <br />
+                                | Immersive media display system, Multi-projection contents optimization
+                            a.btn.btn-primary(href='#') More
+                div.col-sm-7.col-lg-5.card-box
+                    div.card
+                        div.card-header Results
+                        //- div.card-block
+                        img.project-img(src="img/project_img_01-650.jpg")
+                div.hidden-md-down.col-lg-3.card-box.card-person
+                    div.card
+                        div.card-header Funding
+                        div.card-block
+                            p.card-text
+                                span Institute for Information & communications Techonology
+                        div.card-header Manager
+                        div.card-block
+                            p.card-text
+                                span Institute for Information & communications Techonology
+
+            each d in data
+                div.row.project-box
+                    div.col-sm-12.panel-heading
+                        div= d.name
+                    div.col-sm-5.col-lg-4.card-box
+                        div.card
+                            div.card-header About
+                            div.card-block
+                                h5.card-text
+                                    //- span (Full name) <br />
+                                    = d.description
+                                p.card-text
+                                    span (Team) <br />
+                                    = d.team
+                                p.card-text
+                                    span (Area) <br />
+                                    = d.area
+                                p.card-text
+                                    span (Partners) <br />
+                                    = d.partners
+                                a.btn.btn-primary(href='#') More
+                    div.col-sm-7.col-lg-5.card-box
+                        div.card
+                            div.card-header Results
+                            //- div.card-block
+                            //- img.project-img(src="img/project_img_01-650.jpg")
+                            img.project-img(src=d.img)
+                    div.hidden-md-down.col-lg-3.card-box.card-person
+                        div.card
+                            div.card-header Funding
+                            div.card-block
+                                p.card-text
+                                    //- span Institute for Information & communications Techonology
+                                    span= d.funding
+                            div.card-header Manager
+                            div.card-block
+                                p.card-text
+                                    //- span Institute for Information & communications Techonology
+                                    span= d.manager
+
+            //- div.row.project-box
+                div.row.col-xs-12.panel-heading
+                    div Mulit-projection Project
+                div.col-md-5.panel-body.about
+                    p Full name :
+                    div.project-list
+                        p Full name :
+                        p Full name :
+                        p Full name :
+                    div.project-desc
+                        p Development of Realistic Media and Presentation System for large Auditorium
+                        p Development of Realistic Media and Presentation System for large Auditorium
+                        p Development of Realistic Media and Presentation System for large Auditorium
+                div.col-md-4.panel-body
+                    img.img-fluid.img-thumbnail(src="img/project_img_01-650.jpg")
+                div.col-md-3.panel-body
+                    | Panel content
+                div.row.col-xs-12.panel-footer
+                    button.btn.btn-primary.btn-sm(type='button') More
+
+
+    include includes/tail.pug
+    script(src='js2/index.js', type='text/javascript')

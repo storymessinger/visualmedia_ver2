@@ -1,163 +1,81 @@
-// @import "index_576";
-@import "index_992";
-
 //
-$navbar_height : 6rem;
-$color_main_orange : #F05A29;
+@import 'base';
 
+.header {
+    background:
+        linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+        url(/img/Home_MainPic_resize.jpg);
+    background-size: cover;
 
-// this is custom scss file
-html, body {
-    font-family: 'Lato', sans-serif;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    .main {
-        margin-top: 6rem;
-        height: 100%;
+    // for this page to be 'scroll-available'
+    height: 100vh;
+
+    .title {
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        color:white;
+        text-align: center;
+
+        h1 {
+            text-transform: uppercase;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        h4 {
+            margin-top:1rem;
+            margin-bottom: 2.5rem;
+        }
     }
 }
 
-.blue {
-    border: 1px solid blue;
-}
-.red {
-    border: 1px solid red;
-}
-.green {
-    border: 1px solid green;
-}
-
-.navbar {
-    padding-bottom: 0;
-    padding-top: 0;
-    background-color: white;
-    box-shadow: 0px 4px 4px 0px rgba(55,58,60,0.3);
-
-    display: flex;
-    align-items: center;
-    // justify-content: space-between;
-
-    height: $navbar_height;
-    img {
-        margin-right: 1rem;
-        margin-left: 1rem;
+.researchArea {
+    .Heading {
+        text-align: center;
+        padding: 4rem 0 4rem 0;
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
     }
-    ul.navbar-nav {
-        flex-grow: 1;
-    }
-    .form {
-        flex-grow: 0;
-    }
-    .nav-link{
-        padding: 0 1.5rem 0 1.5rem;
+
+    .card-deck-wrapper {
+        .card-deck {
+            justify-content: center;
+            .card {
+                max-width: 350px;
+            }
+        }
     }
 }
+.news {
+    max-width: 1050px;
+    margin: auto;
 
-.sidebar {
-    min-height: 100%;
-    height: 100%;
-    width: 13rem;
-    border-right: 1px solid #eee;
-
-    // list-group-item-active와 sidebar를 맞추려고 패딩오른쪽줌
-    padding-right: 1rem;
-
-    li {
-        height: 5rem;
-        padding-top: 1.8rem;
-        width: 100%;
-
-        font-weight: 600;
-        padding-left: 3rem;
-        cursor: pointer;
+    .Heading {
+        text-align: center;
+        padding: 4rem 0 4rem 0;
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
     }
-    a {
-        height: 4rem;
-        padding-top: 1.1rem;
-        width: 100%;
-        padding-left: 4rem;
-    }
-}
-
-.content {
-    padding:0;
-}
-
-.breadcrumb {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    a {
-        color: #fff;
-    }
-    margin: 0;
-    padding-left: 1.5rem;
-}
-
-.project-box {
-    margin: 2rem 3rem 0 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid #eee;
-
-    .card-box {
-        padding: 0 1rem 0 1rem;
+    .card-columns {
         .card {
-            height: 25rem;
-            img {
-                width: 100%;
+            max-width: 350px;
+            img.sel-img {
+                // -webkit-animation: sel-img-animation 0.3s 1;
+                filter: brightness(30%);
             }
         }
     }
-
-    .panel-heading {
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 3rem;
-        padding: 1rem 0 3rem 0;
-
-        border-top: 2px solid #eee;
-        font-size: 2rem;
-    }
-    .panel-footer {
-
-        button {
-            padding-left: 2rem;
-            padding-right: 2rem;
-        }
-
-    }
-    .panel-body {
-        padding: 3rem 0rem 3rem 0rem;
-        position: relative;
-        height: 70%;
-
-        .project-list {
-            height: 100%;
-            width: 100px;
-            position: absolute;
-            left: 0px;
-
-            display: flex;
-            flex-flow: column;
-            p {
-                // text-align: right;
-                height: 2rem;
-            }
-        }
-        .project-desc {
-            height: 100%;
-            position: static;
-            margin-left: 100px;
-
-            display: flex;
-            flex-flow: column;
-            p {
-                height: 2rem;
-            }
-        }
-
-
-    }
-
 }
+// @-webkit-keyframes sel-img-animation {
+//     0% {
+//         -webkit-filter: grayscale(0);
+//     }
+//     100% {
+//         -webkit-filter: grayscale(1);
+//     }
+// }
