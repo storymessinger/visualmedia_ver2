@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var port = process.env.PORT || 3008;
 
+//
 // setting pug as the view template engine
 // app.engine('pug', require('pug').__express);
 app.set('view engine', 'pug');
