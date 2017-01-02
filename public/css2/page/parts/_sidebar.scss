@@ -1,8 +1,73 @@
+.wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+//
+// .wrapper.toggled {
+//     padding-left: 250px;
+// }
+//
+// .wrapper.toggled .sidebar-wrapper {
+//     width: 250px;
+// }
+//
+// .content {
+//     width: 100%;
+//     position: absolute;
+//     padding: 15px;
+// }
+//
+// .wrapper.toggled .content {
+//     position: absolute;
+//     margin-right: -250px;
+// }
+//
+// .sidebar-wrapper {
+//     z-index: 1000;
+//     position: fixed;
+//     left: 250px;
+//     width: 0;
+//     height: 100%;
+//     margin-left: -250px;
+//     overflow-y: auto;
+//     background: #000;
+//     -webkit-transition: all 0.5s ease;
+//     -moz-transition: all 0.5s ease;
+//     transition: all 0.5s ease;
+// }
+
+.main {
+    overflow: hidden;
+}
+
+.content {
+    // the content is able to grow
+    flex-grow: 1;
+}
+
+// TRANSITION: hide
+.sidebar.hide {
+    margin-left: -$sidebar-width;
+}
+
 .sidebar {
-    min-height: 100%;
-    height: 100%;
-    width: 13rem;
+
+    // TRANSITION
+    -webkit-transition: margin 0.5s ease;
+    -moz-transition: margin 0.5s ease;
+    -o-transition: margin 0.5s ease;
+    transition: margin 0.5s ease;
+
+    // this means flex-grow is 0
+    flex: 0 0 $sidebar-width;
+
+    background: white;
     border-right: 1px solid #eee;
+
     // list-group-item-active와 sidebar를 맞추려고 패딩오른쪽줌
     padding-right: 1rem;
 
@@ -18,7 +83,6 @@
     a {
         height: 4rem;
         padding-top: 1.1rem;
-        width: 100%;
         padding-left: 4rem;
     }
 }

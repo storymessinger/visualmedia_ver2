@@ -1,11 +1,29 @@
-.breadcrumb {
-    height: 50px;
-    display: flex;
-    align-items: center;
+.content {
+    margin-top: 3.6rem;
+}
 
-    a {
-        color: #fff;
-    }
-    margin: 0;
+.breadcrumb-row {
+    background-color: $primary_orange;
+    // position fixed makes breadcrumb fixed ''beneath the navbar''
+    position: fixed;
+    top: 6rem;
+    width: 100%;
+    z-index: 1001;
+
+    // fixing the horiziontal scroll issue
+    margin:0;
+
     padding-left: 1.5rem;
+
+    .breadcrumb {
+        height: 3.6rem;
+        display: flex;
+        align-items: center;
+
+        a {
+            color: #fff;
+        }
+        margin: 0;
+        padding-left: 1.5rem;
+    }
 }

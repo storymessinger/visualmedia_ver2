@@ -1,0 +1,68 @@
+.footer {
+    // need some space around the footer box
+    padding: 3rem 5rem 3rem 5rem;
+    background-color: $primary_dark_grey;
+    color: $primary_white;
+
+    // for the VML main logo in the footer
+    .footer-brand {
+        ul {
+            list-style: none;
+            padding-left: 0;
+            font-size: 0.8rem;
+            font-weight: lighter;
+        }
+        .footer-brand-img {
+            // Go with vw. But should be careful not to make it too small.
+            width: 200px;
+        }
+    }
+
+    .sitemap {
+        .col-xs {
+            padding: 0 1.5rem 0 1.5rem;
+        }
+        ul {
+            color: rgba(255,255,255, 0.5);
+            font-size: 1rem;
+            list-style: none;
+            a {
+                color: $primary_white;
+                line-height: 1.8;
+
+            }
+        }
+    }
+
+    // for the VML partner logos at the footer.
+    .footer-partner {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-around;;
+
+        padding: 3rem 0 3rem 0;
+        .footer-partner-img {
+            // Go with vw. But should be careful not to make it too small.
+            width: 100px;
+        }
+    }
+    @media (max-width: 575px) {
+        .footer-brand{
+            order:1;
+        }
+        .footer-partner {
+            order:-1;
+        }
+
+    }
+
+    .rights {
+        padding-top: 1rem;
+        .rights-text {
+            text-align: center;
+            font-size: 0.7rem;
+        }
+    }
+
+}

@@ -1,38 +1,46 @@
-$navbar_height: 6rem;
 
-$primary_orange: #F05A29;
-$primary_yellow: #FAAF40;
-$primary_dark_grey: #262626;
-$primary_grey: #646367;
-$primary_light_grey: #E9E5DE;
-$primary_white: #F7F7ED;
-
+// import the variables :)
+@import 'parts/variables';
+@import 'parts/footer';
 
 // this is custom scss file
 
 body,
 html {
+    // fonts decided from the clients. Lato. Currently using light regular bold
     font-family: 'Lato', sans-serif;
     height: 100%;
     margin: 0;
     padding: 0;
-
+    overflow-x:hidden;
 }
 
 .main {
+    // this margin is for the fixed navbar height margin. (6rem of nav)
     margin-top: 6rem;
 }
+// This is the part where besided functional aspects, the major contents ALL go in
+.content {
 
+    // fixing the horiziontal scroll issue
+    margin-left:0;
+    margin-right:0;
+    padding: 0;
+
+    // need some margin between content and the footer
+    margin-bottom: 6rem;
+}
 
 .navbar {
     padding-bottom: 0;
     padding-top: 0;
     background-color: white;
-    box-shadow: 0 4px 4px 0 rgba(55,58,60,0.3);
+
     display: flex;
     align-items: center;
-    // justify-content: space-between;
     height: $navbar_height;
+
+    border-bottom: 1px solid #ccc;
 
     img {
         margin-right: 1rem;

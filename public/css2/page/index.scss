@@ -1,7 +1,19 @@
 //
 @import 'base';
 
+////////////// TEST ///////////////////
+
+@media (max-width: 544px) {
+    // this is just 임ㅅ
+    .navbar-nav {
+        display: none;
+    }
+}
+
+////////////// TEST ///////////////////
+
 .header {
+    position: relative;
     background:
         linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
         url(/img/Home_MainPic_resize.jpg);
@@ -29,7 +41,12 @@
         }
     }
 }
+@media (max-width: 991px) {
+    .title p {
+        display: none;
+    }
 
+}
 .researchArea {
     .Heading {
         text-align: center;
