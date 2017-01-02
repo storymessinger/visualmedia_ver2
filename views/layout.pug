@@ -35,6 +35,50 @@ html
 
             block content
 
+        //- this is the basic footer
+        footer.footer.row.container-fluid
+            .col-xs-12
+                .row
+                    .col-xs.col-md-4.footer-brand
+                        .footer-brand-img
+                            img(alt="footerLogo" src="img/logo_footer.svg")
+                        ul
+                            li +82 (0)42 350 5918
+                            li visualmedia@kaist.ac.kr
+                            li 373-1 Guseong-dong. Yueseong-Gu Daejeon, 305-701, South Korea
+                    .hidden-sm-down.col-md-2.sitemap
+                        ul Member
+                            li
+                                a Professor
+                            li
+                                a Students
+                            li
+                                a Former members
+                        ul Member
+                            li
+                                a Professor
+                            li
+                                a Students
+                            li
+                                a Former members
+                    .hidden-sm-down.col-md-2.sitemap
+                        ul Member
+                            li
+                                a Professor
+                            li
+                                a Students
+                            li
+                                a Former members
+                    .col-xs.col-md-4.footer-partner
+                        .footer-partner-img
+                            img.img-fluid(alt="footerPartner" src="img/partnerLogo4.png")
+                        .footer-partner-img
+                            img.img-fluid(alt="footerPartner" src="img/partnerLogo2.png")
+
+                //- .row
+                //-     .col-xs.rights 2016 Visual Media Lab. All rights reserved.
+
+
     include includes/tail.pug
 
-    block js
+    script(src='js2/vml.js', type='text/javascript')

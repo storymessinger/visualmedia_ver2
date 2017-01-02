@@ -1,0 +1,24 @@
+.sidebar {
+    min-height: 100%;
+    height: 100%;
+    width: 13rem;
+    border-right: 1px solid #eee;
+    // list-group-item-active와 sidebar를 맞추려고 패딩오른쪽줌
+    padding-right: 1rem;
+
+    li {
+        height: 5rem;
+        padding-top: 1.8rem;
+        width: 100%;
+        font-weight: 600;
+        padding-left: 3rem;
+        cursor: pointer;
+    }
+
+    a {
+        height: 4rem;
+        padding-top: 1.1rem;
+        width: 100%;
+        padding-left: 4rem;
+    }
+}

@@ -1,48 +1,16 @@
 //
 @import 'base';
+@import 'parts/sidebar';
+@import 'parts/breadcrumb';
+
+//this is for test
+@import 'parts/test';
 
 // @import "index_576";
 @import "index_992";
 
-.sidebar {
-    min-height: 100%;
-    height: 100%;
-    width: 13rem;
-    border-right: 1px solid #eee;
-    // list-group-item-active와 sidebar를 맞추려고 패딩오른쪽줌
-    padding-right: 1rem;
-
-    li {
-        height: 5rem;
-        padding-top: 1.8rem;
-        width: 100%;
-        font-weight: 600;
-        padding-left: 3rem;
-        cursor: pointer;
-    }
-
-    a {
-        height: 4rem;
-        padding-top: 1.1rem;
-        width: 100%;
-        padding-left: 4rem;
-    }
-}
-
 .content {
     padding: 0;
-}
-
-.breadcrumb {
-    height: 50px;
-    display: flex;
-    align-items: center;
-
-    a {
-        color: #fff;
-    }
-    margin: 0;
-    padding-left: 1.5rem;
 }
 
 .project-box {
@@ -87,43 +55,45 @@
         padding: 1rem 0 2.5rem 0.5rem;
         font-size: 2rem;
     }
-    //
-    // .panel-footer {
-    //     button {
-    //         padding-left: 2rem;
-    //         padding-right: 2rem;
-    //     }
-    // }
-    //
-    // .panel-body {
-    //     padding: 3rem 0;
-    //     position: relative;
-    //     height: 70%;
-    //
-    //     .project-list {
-    //         height: 100%;
-    //         width: 100px;
-    //         position: absolute;
-    //         left: 0;
-    //         display: flex;
-    //         flex-flow: column;
-    //
-    //         p {
-    //             // text-align: right;
-    //             height: 2rem;
-    //         }
-    //     }
-    //
-    //     .project-desc {
-    //         height: 100%;
-    //         position: static;
-    //         margin-left: 100px;
-    //         display: flex;
-    //         flex-flow: column;
-    //
-    //         p {
-    //             height: 2rem;
-    //         }
-    //     }
-    // }
+}
+
+footer {
+
+    padding: 3rem 0 3rem 0;
+
+    background-color: $primary_dark_grey;
+    color: $primary_white;
+    .footer-brand {
+        ul {
+            list-style: none;
+            padding-left: 0;
+            font-size: 0.8rem;
+            font-weight: lighter;
+        }
+        .footer-brand-img {
+            width: 15vw;
+            min-width: 200px;
+        }
+    }
+
+    .sitemap {
+        font-size: 0.8rem;
+        ul {list-style: none;}
+    }
+
+    .rights {
+        text-align: center;
+    }
+
+    .footer-partner {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-around;;
+        .footer-partner-img {
+            width: 10vw;
+            min-width: 100px;
+        }
+    }
+
 }

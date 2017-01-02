@@ -1,6 +1,5 @@
-$(function(){
-/////////////////////////////////////////////
-// sidebar btn
+// sidebar btn function
+var sidebar = function(){
     var duration = 100;
 
     var $item_projects = $('.item_projects');
@@ -9,6 +8,8 @@ $(function(){
     $item_projects.css('display','none');
     $item_publications.css('display','none');
 
+    // when you click the btn, you toggleClass
+    // depending on the toggle, you change the display css
     var $btn_projects = $('.projects')
         .on('click', function(){
             $('.projects').toggleClass('active');
@@ -29,5 +30,6 @@ $(function(){
                 $item_publications.css('display','none');
             }
         });
+};
 
-});
+sidebar();

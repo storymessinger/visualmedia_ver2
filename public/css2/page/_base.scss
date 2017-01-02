@@ -1,5 +1,12 @@
 $navbar_height: 6rem;
-$color_main_orange: #F05A29;
+
+$primary_orange: #F05A29;
+$primary_yellow: #FAAF40;
+$primary_dark_grey: #262626;
+$primary_grey: #646367;
+$primary_light_grey: #E9E5DE;
+$primary_white: #F7F7ED;
+
 
 // this is custom scss file
 
@@ -10,10 +17,10 @@ html {
     margin: 0;
     padding: 0;
 
-    .main {
-        margin-top: 6rem;
-        height: 100%;
-    }
+}
+
+.main {
+    margin-top: 6rem;
 }
 
 
