@@ -1,0 +1,55 @@
+@import 'base';
+@import 'parts/sidebar';
+@import 'parts/breadcrumb';
+
+.member_image_box {
+    .card {
+        // width error fix
+        margin: 0 1rem 0 1rem;
+    }
+    display: flex;
+    flex-direction: row-reverse;
+
+    padding: 3rem 1rem 3rem 0;
+
+    .card-subtitle {
+        font-weight: bold;
+        line-height: 1.85;
+    }
+}
+
+.member_desc_box {
+    min-height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 0 3rem 0rem;
+
+
+    .member_desc {
+    // width error fix
+        margin: 0 1rem 0 1rem;
+
+    // to center the desc
+        // display:flex;
+        // flex-direction: column;
+        // justify-content: center;
+
+    //padding
+        padding: 0 1rem 0 1rem;
+
+        .education-date{
+            font-weight: bold;
+        }
+    }
+
+    hr.style-one {
+        border: 0;
+        height: 1px;
+        background: #333;
+        background-image: linear-gradient(to right, $primary_orange, #eee);
+        width: 100%;
+
+        margin: 1.5rem 0 1.5rem 0;
+    }
+}
