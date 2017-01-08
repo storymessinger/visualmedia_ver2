@@ -1,4 +1,3 @@
-
 // import the variables :)
 @import 'parts/variables';
 
@@ -29,7 +28,6 @@ body {
         // if there is sidebar, sidebar will have width of 16rem
         .sidebar {
             flex: 0 0 $sidebar-width;
-            background-color: black;
         }
         .flex-content {
             flex-grow:1;
@@ -51,39 +49,11 @@ body {
     margin-left:0;
     margin-right:0;
     padding: 0;
-    // need some margin between content and the footer
+    // need some margin between content and the nav/footer
+    margin-top: 2rem;
     margin-bottom: 6rem;
 }
 
-.navbar {
-    // flexbox
-    display: flex;
-    align-items: center;
-
-    padding-bottom: 0;
-    padding-top: 0;
-    height: $navbar_height;
-
-    background-color: white;
-    border-bottom: 1px solid #ccc;
-
-    img {
-        margin-right: 1rem;
-        margin-left: 1rem;
-    }
-
-    ul.navbar-nav {
-        flex-grow: 1;
-    }
-
-    .form {
-        flex-grow: 0;
-    }
-
-    .nav-link {
-        padding: 0 1.5rem;
-    }
-}
 
 .footer {
     // flexbox

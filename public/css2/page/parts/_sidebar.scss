@@ -1,27 +1,18 @@
 // import the variables :)
 @import 'variables';
 
-// TRANSITION: hide
-.sidebar.hide {
-    margin-left: -$sidebar-width;
-}
-
 .sidebar {
-
-    // TRANSITION
-    -webkit-transition: margin 0.5s ease;
-    -moz-transition: margin 0.5s ease;
-    -o-transition: margin 0.5s ease;
-    transition: margin 0.5s ease;
-
     // this means flex-grow is 0
     flex: 0 0 $sidebar-width;
 
-    background: white;
-    border-right: 1px solid #eee;
+    background-color: #fff;
+    border-right: 1px solid $primary_light_grey;
 
     // list-group-item-active와 sidebar를 맞추려고 패딩오른쪽줌
     padding-right: 1rem;
+
+    left:0;
+    transition: all 0.5s ease;
 
     li {
         height: 5rem;
@@ -38,3 +29,54 @@
         padding-left: 4rem;
     }
 }
+
+.sidebar_btn {
+    display: none;
+}
+
+//// Sidebar under 1200px
+@media (max-width: 1199px) {
+    .sidebar {
+        position: fixed;
+        height: 100vh;
+        width: 16rem;
+        // box-shadow:
+        left:-$sidebar-width;
+        z-index: 1001;
+
+        // remove border-right
+        border-right: 1px solid #fff;
+
+        // onClick sidebar_tn, this gets toggled on
+    }
+    .open {
+        left: 0rem;
+    }
+    .sidebar_btn {
+        display: unset;
+    }
+//// End Sidebar under 1200px
+
+//// Dimmer
+    // make background dimmer when sidebar opened
+    .make_dimmer {
+        transition: all 0.3s ease;
+        display:none;
+    }
+
+    // toggle dimmer on a
+    // div.make_dimmer when sidebar is unfolded
+    .dimmer {
+        display:block;
+        background:#000;
+        opacity:0.5;
+        position:fixed; /*enter code here important to use fixed, not absolute */
+        // lower than 1001(sidebar)
+        z-index: 1000;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+    }
+}
+//// Dimmer end

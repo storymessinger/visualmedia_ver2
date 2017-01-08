@@ -3,6 +3,22 @@ extends ./layout
 block css
     link(href="css2/page/project.min.css" rel="stylesheet")
 
+block nav
+    div.breadcrumb-row.row
+        ol.breadcrumb.col-xs
+            li
+                img.sidebar_btn(src="img/ic_menu_white_36px.svg" fill-opacity="0" width="30px")
+                //- button.sidebar_btn(type="button")
+                //-     img(src="img/ic_menu_white_36px.svg" fill-opacity="0")
+
+            li.breadcrumb-item.active
+                a(href="#") Home
+            li.breadcrumb-item.active
+                a(href="#") People
+            li.breadcrumb-item
+                a(href="#") Students
+
+
 block sidebar
     div.sidebar
         ul.row.list-group
@@ -15,17 +31,8 @@ block sidebar
 
 block content
     .flex-content
+        .make_dimmer
         div.content.col-xs.container-fluid
-            //- div.breadcrumb-row.row
-            //-     ol.row.breadcrumb
-            //-         li
-            //-             button.sidebar_hide_btn(type="button") Click
-            //-         li.breadcrumb-item.active
-            //-             a(href="#") Home
-            //-         li.breadcrumb-item.active
-            //-             a(href="#") People
-            //-         li.breadcrumb-item
-            //-             a(href="#") Students
 
             div.row.project-box
                 div.col-sm-12.panel-heading

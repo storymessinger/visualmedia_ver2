@@ -1,5 +1,6 @@
 //
 @import 'base';
+@import 'parts/nav';
 
 ////////////// TEST ///////////////////
 
@@ -11,6 +12,9 @@
 }
 
 ////////////// TEST ///////////////////
+.main {
+    margin-top: $navbar-height; 
+}
 
 .header {
     position: relative;

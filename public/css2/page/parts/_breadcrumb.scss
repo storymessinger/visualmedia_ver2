@@ -1,29 +1,52 @@
-.content {
-    margin-top: 3.6rem;
+
+.breadcrumb-row {
+    position: fixed;
+    right:0;
+    left:0;
+    z-index:1030;
+
 }
 
 .breadcrumb-row {
+    // flexbox
+    display: flex;
+    align-items: center;
+
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-left: 2rem;
+    height: $navbar_height;
+
     background-color: $primary_orange;
-    // position fixed makes breadcrumb fixed ''beneath the navbar''
-    position: fixed;
-    top: 6rem;
-    width: 100%;
-    z-index: 1001;
 
-    // fixing the horiziontal scroll issue
-    margin:0;
+    //font-relate
+    font-size: 1.2rem;
 
-    padding-left: 1.5rem;
+    // material-shadow
+    @include card(1);
 
     .breadcrumb {
         height: 3.6rem;
         display: flex;
         align-items: center;
-
+        margin: 0;
         a {
             color: #fff;
         }
-        margin: 0;
-        padding-left: 1.5rem;
     }
+    //
+    // .form {
+    //     flex-grow: 0;
+    // }
+    // .nav-link {
+    //     padding: 0 1.5rem;
+    // }
+}
+
+.sidebar_btn {
+    color: rgba(255,255,255,1);
+    background-color: $primary-orange;
+    margin-right: 2rem;
+
+    cursor: pointer;
 }

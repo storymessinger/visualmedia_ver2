@@ -31,43 +31,53 @@ function sidebar_btn() {
 }
 
 // sidebar hide toggle
-function sidebar_hide() {
+function sidebar_open() {
     var $sidebar = $('.sidebar');
-    var $hideBtn= $('.sidebar_hide_btn')
+    var $make_dimmer= $('.make_dimmer');
+    // Pressing sidebar btn toggles(open/close) sidebar
+    var $openBtn= $('.sidebar_btn')
         .on('click',function(){
-            $sidebar.toggleClass('hide');
+            console.log('open');
+            $sidebar.toggleClass('open');
+            $make_dimmer.toggleClass('dimmer');
         });
+    // when sidebar is open >> Pressing content wiil close sidebar
+    $make_dimmer.on('click', function(){
+        console.log('dimmer');
+        $sidebar.toggleClass('open');
+        $make_dimmer.toggleClass('dimmer');
+    });
 }
 
 // Very nice implementation of deboucing. Wihtout this, a function such as resize is run a lot of times within a short time
 // By implementing this function factory, you do not have to keep track of global timeoutID's, because this ID is within this scope
 // http://stackoverflow.com/questions/4298612/jquery-how-to-call-resize-event-only-once-its-finished-resizing
-function debouncer( func , in_timeout ) {
-   var timeoutID;
-   var timeout = in_timeout || 200;
-   return function () {
-      var scope = this;
-      var args = arguments;
-      console.log(Array.prototype.slice.call( args ));
-      clearTimeout( timeoutID );
-      timeoutID = setTimeout( function () {
-          func.apply( scope , Array.prototype.slice.call( args ) );
-      } , timeout );
-  };
-}
+// function debouncer( func , in_timeout ) {
+//    var timeoutID;
+//    var timeout = in_timeout || 200;
+//    return function () {
+//       var scope = this;
+//       var args = arguments;
+//       console.log(Array.prototype.slice.call( args ));
+//       clearTimeout( timeoutID );
+//       timeoutID = setTimeout( function () {
+//           func.apply( scope , Array.prototype.slice.call( args ) );
+//       } , timeout );
+//   };
+// }
 
-// Automatically resize the sidebar when window widht goes below 992px(sm-md)
-$(window).resize(debouncer(function() {
-// $(window).on('resize', debouncer(function() {  -- also possible
-    var $sidebar = $('.sidebar');
-    if($(window).width() < 991) {
-        $sidebar.addClass('hide');
-    }else{
-        $sidebar.removeClass('hide');
-    }
-    console.log('loaded');
-}, 300));
+// // Automatically resize the sidebar when window widht goes below 992px(sm-md)
+// $(window).resize(debouncer(function() {
+// // $(window).on('resize', debouncer(function() {  -- also possible
+//     var $sidebar = $('.sidebar');
+//     if($(window).width() < 991) {
+//         $sidebar.addClass('hide');
+//     }else{
+//         $sidebar.removeClass('hide');
+//     }
+//     console.log('loaded');
+// }, 300));
 
 
 sidebar_btn();
-sidebar_hide();
+sidebar_open();
