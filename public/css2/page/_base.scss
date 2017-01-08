@@ -18,15 +18,19 @@ html {
 .main {
     // this margin is for the fixed navbar height margin. (6rem of nav)
     margin-top: 6rem;
+    // .main also has .row, so we do not need to specifiy this
+    // but to clarify,
+    display: flex;
 }
-// This is the part where besided functional aspects, the major contents ALL go in
-.content {
 
+// This is the part where beside functional aspects, the major contents ALL go in
+.content {
+    // the content is able to grow
+    flex-grow: 1;
     // fixing the horiziontal scroll issue
     margin-left:0;
     margin-right:0;
     padding: 0;
-
     // need some margin between content and the footer
     margin-bottom: 6rem;
 }
