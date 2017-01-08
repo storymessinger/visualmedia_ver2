@@ -4,7 +4,6 @@
 
 // this is custom scss file
 
-body,
 html {
     // fonts decided from the clients. Lato. Currently using light regular bold
     font-family: 'Lato', sans-serif;
@@ -18,18 +17,36 @@ html {
     overflow-x:hidden;
 }
 
+// this is for the holyGrail layout
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    .main {
+        display: flex;
+        flex: 1;
+        // if there is sidebar, sidebar will have width of 16rem
+        .sidebar {
+            flex: 0 0 $sidebar-width;
+            background-color: black;
+        }
+        .flex-content {
+            flex-grow:1;
+            display: flex;
+        }
+    }
+}
+
 .main {
     // this margin is for the fixed navbar height margin. (6rem of nav)
     margin-top: 6rem;
-    // .main also has .row, so we do not need to specifiy this
-    // but to clarify,
-    display: flex;
 }
 
 // This is the part where beside functional aspects, the major contents ALL go in
 .content {
     // the content is able to grow
-    flex-grow: 1;
+    // flex-grow: 1;
     // fixing the horiziontal scroll issue
     margin-left:0;
     margin-right:0;
