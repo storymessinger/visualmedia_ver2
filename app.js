@@ -9,7 +9,7 @@ app.set('view engine', 'pug');
 app.set('views', __dirname + '/views');
 
 // Makes pretty html for pug file
-// app.locals.pretty = true;
+app.locals.pretty = true;
 
 // making the 'public' folder for the static assets folder
 //app.use('/user', express.static(__dirname + '/public'));
