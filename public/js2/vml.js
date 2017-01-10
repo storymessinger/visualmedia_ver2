@@ -1,3 +1,16 @@
+// student member function
+function student_touch() {
+    var $student_card = $('.card');
+    $student_card.on('mouseenter',function(){
+        $(this).addClass('member_touch');
+    });
+    $student_card.on('mouseleave',function(){
+        $(this).removeClass('member_touch');
+    });
+}
+
+student_touch();
+
 // sidebar btn function
 function sidebar_btn() {
     var $item_projects = $('.item_projects');
@@ -48,36 +61,6 @@ function sidebar_open() {
         $make_dimmer.toggleClass('dimmer');
     });
 }
-
-// Very nice implementation of deboucing. Wihtout this, a function such as resize is run a lot of times within a short time
-// By implementing this function factory, you do not have to keep track of global timeoutID's, because this ID is within this scope
-// http://stackoverflow.com/questions/4298612/jquery-how-to-call-resize-event-only-once-its-finished-resizing
-// function debouncer( func , in_timeout ) {
-//    var timeoutID;
-//    var timeout = in_timeout || 200;
-//    return function () {
-//       var scope = this;
-//       var args = arguments;
-//       console.log(Array.prototype.slice.call( args ));
-//       clearTimeout( timeoutID );
-//       timeoutID = setTimeout( function () {
-//           func.apply( scope , Array.prototype.slice.call( args ) );
-//       } , timeout );
-//   };
-// }
-
-// // Automatically resize the sidebar when window widht goes below 992px(sm-md)
-// $(window).resize(debouncer(function() {
-// // $(window).on('resize', debouncer(function() {  -- also possible
-//     var $sidebar = $('.sidebar');
-//     if($(window).width() < 991) {
-//         $sidebar.addClass('hide');
-//     }else{
-//         $sidebar.removeClass('hide');
-//     }
-//     console.log('loaded');
-// }, 300));
-
 
 sidebar_btn();
 sidebar_open();

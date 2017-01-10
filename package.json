@@ -40,5 +40,8 @@
     "pug": "^2.0.0-beta6",
     "session-file-store": "^1.0.0",
     "sha256": "^0.2.0"
+  },
+  "devDependencies": {
+    "jasmine": "^2.5.2"
   }
 }

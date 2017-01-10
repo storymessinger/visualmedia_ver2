@@ -1,0 +1,61 @@
+@import 'base';
+@import 'parts/breadcrumb';
+@import 'parts/sidebar';
+
+.content-row {
+    // fixing row under col margin bug
+    margin : 0;
+    justify-content: center;
+
+}
+
+.member_image_box {
+    // row
+    display: flex;
+    flex-wrap:wrap;
+
+    max-width: 1500px;
+
+    padding: 2rem 0 2rem 0;
+
+    .card {
+        margin-bottom: 3rem;
+        transition: all 0.7s ease;
+
+        .img-block {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid white;
+            img {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                -webkit-transform: translateY(-50%) translateX(-50%);
+
+            }
+        }
+        .card-title {
+        }
+
+        .card-subtitle {
+            font-weight: bold;
+            line-height: 1.85;
+        }
+    }
+}
+
+.member_touch {
+    background-color: $primary_orange;
+    color: $primary_white;
+    @include card(2);
+    .img-block{
+        border: 1px solid white;
+    }
+    img {
+            // 이미지를 모노톤으로 만들어준다
+            mix-blend-mode: screen; // 굉장히 신기한 기능 (모든 브라우저 작동 여부 판단 필요)
+            -webkit-filter: grayscale(100%) contrast(180%);
+            filter: grayscale(100%) contrast(180%);
+    }
+}

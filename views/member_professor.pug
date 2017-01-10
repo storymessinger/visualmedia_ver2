@@ -3,8 +3,22 @@ extends ./layout
 block css
     link(href="css2/page/member_professor.min.css" rel="stylesheet")
 
-block sidebar
+block nav
+    div.breadcrumb-row.row
+        ol.breadcrumb.col-xs
+            li
+                img.sidebar_btn(src="img/ic_menu_white_36px.svg" fill-opacity="0" width="30px")
+                //- button.sidebar_btn(type="button")
+                //-     img(src="img/ic_menu_white_36px.svg" fill-opacity="0")
 
+            li.breadcrumb-item.active
+                a(href="#") Home
+            li.breadcrumb-item.active
+                a(href="#") People
+            li.breadcrumb-item
+                a(href="#") Students
+
+block sidebar
     div.sidebar
         ul.row.list-group
             li.list-group-item.list-group-item-action.projects Projects
@@ -15,74 +29,67 @@ block sidebar
             a.list-group-item.list-group-item-action.item_publications(href='#') Finished Projects
 
 block content
-    div.content.col-xs.container-fluid
-        div.breadcrumb-row.row
-            ol.row.breadcrumb
-                li
-                    button.sidebar_hide_btn(type="button") Click
-                li.breadcrumb-item.active
-                    a(href="#") Home
-                li.breadcrumb-item.active
-                    a(href="#") People
-                li.breadcrumb-item
-                    a(href="#") Students
+    .flex-content
+        .make_dimmer
+        div.content.col-xs.container-fluid
+            //- Until here, it is the basic structure
 
-        div.row.member_specific_box
-            div.col-xs-12.col-md-6.member_image_box
-                div.card.col-xs.col-md-8
-                    div.card-block
-                        h1.card-title Junyong Noh
-                        h4.card-subtitle.text-muted Professor
-                    img.img-fluid(src="img/member_professor.jpg" alt="Professor profile img")
-                    div.card-block
-                        h5.card-subtitle E-MAIL
-                        h5.card-text junyongnoh@kaist.ac.kr
-                    div.card-block
-                        h5.card-subtitle MAILING ADDRESS
-                        h5.card-text
-                            |Daejeon 305-701 Korea
+            div.row.content-row
+                div.col-xs-12.col-md-6.member_image_box
+                    div.card.col-xs-10.offset-xs-1.col-md-8
+                        div.card-block
+                            h1.card-title Junyong Noh
+                            h4.card-subtitle.text-muted Professor
+                        img.img-fluid(src="img/member_professor.jpg" alt="Professor profile img")
+                        div.card-block
+                            h5.card-subtitle E-MAIL
+                            h5.card-text junyongnoh@kaist.ac.kr
+                        div.card-block
+                            h5.card-subtitle MAILING ADDRESS
+                            h5.card-text
+                                |Daejeon 305-701 Korea
 
-            div.col-xs-12.col-md-6.member_desc_box
-                div.col-xs.col-md-8.member_desc
-                    .col-xs-12
-                        h3.position-title Professor
-                        h5.position-desc
-                        |Visual Media Lab, KAIST <br />
-                        |Head of Department, Graduate School of Culture and Technology, KAIST <br />
+                div.col-xs-12.col-md-6.member_desc_box
+                    div.col-xs.col-md-8.member_desc
+                        .col-xs-12
+                            h3.position-title Professor
+                            h5.position-desc
+                            |Visual Media Lab, KAIST <br />
+                            |Head of Department, Graduate School of Culture and Technology, KAIST <br />
 
-                        hr.style-one
-                        h3.interest-title Research interest
-                        h5.interest-desc
-                        |Computer Graphics, Computer Vision, Video Projection,<br />
-                        |Facial Animation, Character Animation,<br />
-                        |Fluid Simulation, Stereoscopic Visualization<br />
+                            hr.style-one
+                            h3.interest-title Research interest
+                            h5.interest-desc
+                            |Computer Graphics, Computer Vision, Video Projection,<br />
+                            |Facial Animation, Character Animation,<br />
+                            |Fluid Simulation, Stereoscopic Visualization<br />
 
-                        hr.style-one
-                    .col-xs-12
-                        h3.education-title Education
-                        .row
-                            .col-sm-12.col-md-4
-                                h6.education-date 2002
-                            .col-sm-12.col-md-8
-                                p.education-desc
-                                    |Ph.D. Computer Science<br />
-                                    |University of Southern California,<br />
-                                    |advisor Prof. Ulrich Neumann<br />
-                                    |- Thesis "Facial Animation by Expression Cloning"<br />
-                            .col-sm-12.col-md-4
-                                h6.education-date 2002
-                            .col-sm-12.col-md-8
-                                p.education-desc
-                                    |Ph.D. Computer Science<br />
-                                    |University of Southern California,<br />
-                                    |advisor Prof. Ulrich Neumann<br />
-                                    |- Thesis "Facial Animation by Expression Cloning"<br />
-                            .col-sm-12.col-md-4
-                                h6.education-date 2002
-                            .col-sm-12.col-md-8
-                                p.education-desc
-                                    |Ph.D. Computer Science<br />
-                                    |University of Southern California,<br />
-                                    |advisor Prof. Ulrich Neumann<br />
-                                    |- Thesis "Facial Animation by Expression Cloning"<br />
-                        hr.style-one
+                            hr.style-one
+                        .col-xs-12
+                            h3.education-title Education
+                            .row
+                                .col-sm-12.col-md-4
+                                    h6.education-date 2002
+                                .col-sm-12.col-md-8
+                                    p.education-desc
+                                        |Ph.D. Computer Science<br />
+                                        |University of Southern California,<br />
+                                        |advisor Prof. Ulrich Neumann<br />
+                                        |- Thesis "Facial Animation by Expression Cloning"<br />
+                                .col-sm-12.col-md-4
+                                    h6.education-date 2002
+                                .col-sm-12.col-md-8
+                                    p.education-desc
+                                        |Ph.D. Computer Science<br />
+                                        |University of Southern California,<br />
+                                        |advisor Prof. Ulrich Neumann<br />
+                                        |- Thesis "Facial Animation by Expression Cloning"<br />
+                                .col-sm-12.col-md-4
+                                    h6.education-date 2002
+                                .col-sm-12.col-md-8
+                                    p.education-desc
+                                        |Ph.D. Computer Science<br />
+                                        |University of Southern California,<br />
+                                        |advisor Prof. Ulrich Neumann<br />
+                                        |- Thesis "Facial Animation by Expression Cloning"<br />
+                            hr.style-one

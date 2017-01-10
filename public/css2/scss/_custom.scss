@@ -21,8 +21,9 @@ $dropdown-margin-top:            2.25rem;
 // breadcrumbs
 $breadcrumb-bg:                 $brand-primary;
 $breadcrumb-divider-color:      white;
+$breadcrumb-divider:            ">";
 // $breadcrumb-active-color:       $gray-light !default;
-$breadcrumb-divider:            "/" !default;
+
 
 // 박스의 fillet 없애기
 $border-radius:          0rem;

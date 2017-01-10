@@ -1,6 +1,11 @@
 @import 'base';
-@import 'parts/sidebar';
 @import 'parts/breadcrumb';
+@import 'parts/sidebar';
+
+.content-row {
+    // fixing row under col margin bug
+    margin : 0;
+}
 
 .member_image_box {
     .card {
