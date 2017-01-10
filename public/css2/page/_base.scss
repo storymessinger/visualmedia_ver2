@@ -1,61 +1,127 @@
-
 // import the variables :)
 @import 'parts/variables';
-@import 'parts/footer';
 
 // this is custom scss file
 
-body,
 html {
     // fonts decided from the clients. Lato. Currently using light regular bold
     font-family: 'Lato', sans-serif;
     height: 100%;
     margin: 0;
     padding: 0;
+
+    // fixes overflowing bug in the x.
+    // think it may have to do with breadcrumbs.
+    // should find out
     overflow-x:hidden;
+}
+
+// this is for the holyGrail layout
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    .main {
+        display: flex;
+        flex: 1;
+        // if there is sidebar, sidebar will have width of 16rem
+        .sidebar {
+            flex: 0 0 $sidebar-width;
+        }
+        .flex-content {
+            flex-grow:1;
+            display: flex;
+        }
+    }
 }
 
 .main {
     // this margin is for the fixed navbar height margin. (6rem of nav)
     margin-top: 6rem;
 }
-// This is the part where besided functional aspects, the major contents ALL go in
-.content {
 
+// This is the part where beside functional aspects, the major contents ALL go in
+.content {
+    // the content is able to grow
+    // flex-grow: 1;
     // fixing the horiziontal scroll issue
     margin-left:0;
     margin-right:0;
     padding: 0;
-
-    // need some margin between content and the footer
+    // need some margin between content and the nav/footer
+    margin-top: 2rem;
     margin-bottom: 6rem;
 }
 
-.navbar {
-    padding-bottom: 0;
-    padding-top: 0;
-    background-color: white;
 
+.footer {
+    // flexbox
     display: flex;
-    align-items: center;
-    height: $navbar_height;
+    // need some space around the footer box
+    padding: 3rem 5rem 3rem 5rem;
+    background-color: $primary_dark_grey;
+    color: $primary_white;
 
-    border-bottom: 1px solid #ccc;
-
-    img {
-        margin-right: 1rem;
-        margin-left: 1rem;
+    // for the VML main logo in the footer
+    .footer-brand {
+        ul {
+            list-style: none;
+            padding-left: 0;
+            font-size: 0.8rem;
+            font-weight: lighter;
+        }
+        .footer-brand-img {
+            // Go with vw. But should be careful not to make it too small.
+            width: 200px;
+        }
     }
 
-    ul.navbar-nav {
-        flex-grow: 1;
+    .sitemap {
+        .col-xs {
+            padding: 0 1.5rem 0 1.5rem;
+        }
+        ul {
+            color: rgba(255,255,255, 0.5);
+            font-size: 1rem;
+            list-style: none;
+            a {
+                color: $primary_white;
+                line-height: 1.8;
+
+            }
+        }
     }
 
-    .form {
-        flex-grow: 0;
+    // for the VML partner logos at the footer.
+    .footer-partner {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-around;;
+
+        padding: 3rem 0 3rem 0;
+        .footer-partner-img {
+            // Go with vw. But should be careful not to make it too small.
+            width: 100px;
+        }
+    }
+    @media (max-width: 575px) {
+        .footer-brand{
+            order:1;
+        }
+        .footer-partner {
+            order:-1;
+        }
+
     }
 
-    .nav-link {
-        padding: 0 1.5rem;
+    .rights {
+        padding-top: 1rem;
+        .rights-text {
+            text-align: center;
+            font-size: 0.7rem;
+        }
     }
+
 }

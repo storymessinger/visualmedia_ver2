@@ -1,0 +1,32 @@
+.navbar {
+    // flexbox
+    display: flex;
+    align-items: center;
+
+    // material-like shadow
+    @include card(1);
+
+    padding-bottom: 0;
+    padding-top: 0;
+    height: $navbar_height;
+
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+
+    img {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    ul.navbar-nav {
+        flex-grow: 1;
+    }
+
+    .form {
+        flex-grow: 0;
+    }
+
+    .nav-link {
+        padding: 0 1.5rem;
+    }
+}
