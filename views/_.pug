@@ -1,0 +1,155 @@
+extends ./layout
+
+block css
+    link(href="css2/page/index.min.css" rel="stylesheet")
+
+block nav
+    nav.navbar.navbar-light.navbar-fixed-top
+        div.indexPage-nav-btn.navbar-brand
+            img(alt="Brand" src="img/logo-h100.svg" width="168")
+            //- button.navbar-toggler(type='button' data-toggle="collapse" data-target="#exCollapsingNavbar")
+                div#exCollapsingNavbar.collapse
+                    div.bg-inverse.text-muted.p-1
+                        h4 Collapsed content
+                        span.text-muted Toggleable via the navbar brand.
+        ul.nav.navbar-nav
+            li.nav-item.active
+                a.nav-link(href='#')
+                    | About
+                    span.sr-only (current)
+            li.nav-item
+                a.nav-link(href='#') People
+            li.nav-item
+                a.nav-link(href='#') Research
+            li.nav-item
+                a.nav-link(href='#') News&Events
+            li.nav-item
+                a.nav-link(href='#') Archives
+
+
+
+block content
+    div.indexPage-nav.invisible
+        div.list-group
+            a.list-group-item(href="#") About
+            a.list-group-item(href="#") People
+            a.list-group-item(href="#") Research
+            a.list-group-item(href="#") News & Events
+            a.list-group-item(href="#") Archives
+    .col-xs
+        .row.header
+            .title
+                h1 Visual Media Lab.
+                h4 Where Creativity Meets Techonology
+                p focuses on developing fundamental computer graphics technology and software applications specifically for the creation of movie visual effects and animated films. Since its foundation in 2006, VML has emphasized both R&D and contens production as a core part of lab activity. About 20 Ph.D. and master program students along have published numerous papers at premium graphics conferences and showcased animations at international computer animated festivals. The close relationship with industry has allowed VML to contribute its technology to recently released movies.
+
+        .row.content
+            .researchArea.col-xs-12
+                .Heading
+                    h1 Reseach Area
+                    p The main research area includes motion and facial animation of virtual chararcter, immersive display system and human interaction system
+                .card-deck-wrapper
+                    .card-deck
+                        .card
+                            img.img-fluid.card-img-top(src='/img/Home_ResearchArea_1.png', alt='Card image cap')
+                            .card-block
+                                h4.card-title Card title
+                                p.card-text
+                                    | This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                                p.card-text
+                                    small.text-muted Last updated 3 mins ago
+                        .card
+                            img.img-fluid.card-img-top(src='/img/Home_ResearchArea_1.png', alt='Card image cap')
+                            .card-block
+                                h4.card-title Card title
+                                p.card-text This card has supporting text below as a natural lead-in to additional content.
+                                p.card-text
+                                    small.text-muted Last updated 3 mins ago
+                        .card
+                            img.img-fluid.card-img-top(src='/img/Home_ResearchArea_1.png', alt='Card image cap')
+                            .card-block
+                                h4.card-title Card title
+                                p.card-text
+                                    | This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                                p.card-text
+                                    small.text-muted Last updated 3 mins ago
+            .row.news
+                .Heading.col-xs-12
+                    h1 Recent News and Publication
+                    p The main research area includes motion and facial animation of virtual chararcter, immersive display system and human interaction system
+
+                .card-columns
+                    .card.card-inverse
+                        img.sel-img.card-img.img-fluid(src='/img/Home_ResearchArea_1.png' alt='Card image cap')
+                        .card-img-overlay
+                            h4.card-title Optimization Based Interactive Motion Synthesis
+                            p.card-text Optimization Based Interactive Motion Synthesis
+                            p.card-text
+                                small.text-muted Last updated 3 mins ago
+                    .card.card-block
+                        blockquote.card-blockquote
+                            p
+                                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                            footer
+                                small.text-muted
+                                    | Someone famous in
+                                    cite(title='Source Title') Source Title
+                    .card
+                        img.card-img-top.img-fluid(src='/img/Home_RecentPublication_1.png', alt='Card image cap')
+                        .card-block
+                            h4.card-title Card title
+                            p.card-text This card has supporting text below as a natural lead-in to additional content.
+                            p.card-text
+                                small.text-muted Last updated 3 mins ago
+                    .card.card-block.card-inverse.card-primary.text-xs-center
+                        blockquote.card-blockquote
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.
+                            footer
+                                small
+                                    | Someone famous in
+                                    cite(title='Source Title') Source Title
+                    .card.card-block.text-xs-center
+                        h4.card-title Card title
+                        p.card-text This card has supporting text below as a natural lead-in to additional content.
+                        p.card-text
+                            small.text-muted Last updated 3 mins ago
+                    .card
+                        img.card-img.img-fluid(src='/img/AboutPeople1.png', alt='Card image')
+                    .card.card-block.text-xs-right
+                        blockquote.card-blockquote
+                            p
+                                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                            footer
+                                small.text-muted
+                                    | Someone famous in
+                                    cite(title='Source Title') Source Title
+                    .card.card-block
+                        h4.card-title Card title
+                        p.card-text
+                            | This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                        p.card-text
+                            small.text-muted Last updated 3 mins ago
+                    .card
+                        img.card-img-top.img-fluid(src='/img/Home_ResearchArea_1.png' alt='Card image cap')
+                        .card-block
+                            h4.card-title Card title that wraps to a new line
+                            p.card-text
+                                | This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    .card.card-block
+                        blockquote.card-blockquote
+                            p
+                                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                            footer
+                                small.text-muted
+                                    | Someone famous in
+                                    cite(title='Source Title') Source Title
+                    .card
+                        img.card-img.img-fluid(src='/img/AboutPeople1.png', alt='Card image')
+                    .card.card-block.text-xs-right
+                        blockquote.card-blockquote
+                            p
+                                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                            footer
+                                small.text-muted
+                                    | Someone famous in
+                                    cite(title='Source Title') Source Title

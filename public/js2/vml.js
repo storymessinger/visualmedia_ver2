@@ -21,33 +21,22 @@ function student_touch() {
 
 
 // sidebar btn function
-function sidebar_btn() {
-    var $item_projects = $('.item_projects');
-    var $item_publications= $('.item_publications');
-        // first, set the display to none
-    $item_projects.css('display','none');
-    $item_publications.css('display','none');
+function sidebar_btn_new(){
+    var $menuList = $('.menuList');
+    // first, set the display to none
+    $menuList.css('display','none');
 
-    // when you click the btn, you toggleClass
-    // depending on the toggle, you change the display css
-    var $btn_projects = $('.projects')
+    // when you click the menu, you toggleClass
+    // depending on the togglebtn, you change the display css
+    var $menus = $('.menu')
         .on('click', function(){
-            $('.projects').toggleClass('active');
-            $item_projects.toggleClass('open');
-            if($item_projects.hasClass('open')){
-                $item_projects.css('display','unset');
+            $(this).toggleClass('active');
+            var $target = $(".item_" + $(this).text());
+            $target.toggleClass('open');
+            if($target.hasClass('open')){
+                $target.css('display','unset');
             } else {
-                $item_projects.css('display','none');
-            }
-        });
-    var $btn_publications = $('.publications')
-        .on('click', function(){
-            $('.publications').toggleClass('active');
-            $item_publications.toggleClass('open');
-            if($item_publications.hasClass('open')){
-                $item_publications.css('display','unset');
-            } else {
-                $item_publications.css('display','none');
+                $target.css('display','none');
             }
         });
 }
@@ -71,39 +60,45 @@ function sidebar_open() {
     });
 }
 
-
-// Youtube Fluid video
-// Find all YouTube videos
-var $allVideos = $("iframe[src^='//www.youtube.com']");
-var $fluidEl = $(".fluidEl");
-// Figure out and save aspect ratio for each video
-$allVideos.each(function() {
+// IIFE
+// this makes vidoe fluid-!
+//
+(function(){
     console.log('hi');
-  $(this)
-    .data('aspectRatio', this.height / this.width)
-    // and remove the hard coded width/height
-    .removeAttr('height')
-    .removeAttr('width');
-});
-// When the window is resized
-$(window).resize(function() {
-  var newWidth = $fluidEl.width();
-  // Resize all videos according to their own aspect ratio
-  $allVideos.each(function() {
-    var $el = $(this);
-    $el
-      .width(newWidth)
-      .height(newWidth * $el.data('aspectRatio'));
-  });
-// Kick off one resize to fix all videos on page load
-}).resize();
-
+    // Youtube Fluid video
+    // Find all YouTube videos
+    // var $allVideos = $("iframe[src^='https://www.youtube.com']");
+    var $allVideos = $("iframe");
+    var $fluidEl = $(".videoWrapper");
+    // Figure out and save aspect ratio for each video
+    $allVideos.each(function() {
+        console.log('inside');
+      $(this)
+        .data('aspectRatio', this.height / this.width)
+        // and remove the hard coded width/height
+        .removeAttr('height')
+        .removeAttr('width');
+    });
+    // When the window is resized
+    $(window).resize(function() {
+      var newWidth = $fluidEl.width();
+      // Resize all videos according to their own aspect ratio
+      $allVideos.each(function() {
+        var $el = $(this);
+        $el
+          .width(newWidth)
+          .height(newWidth * $el.data('aspectRatio'));
+      });
+    // Kick off one resize to fix all videos on page load
+    }).resize();
+}());
 
 
 function init(){
     indexPageNav_toggle();
     student_touch();
-    sidebar_btn();
+    // sidebar_btn();
+    sidebar_btn_new();
     sidebar_open();
 }
 

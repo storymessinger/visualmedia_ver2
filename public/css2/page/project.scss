@@ -16,7 +16,7 @@
             overflow: hidden;
 
             span {
-                font-size: 0.6rem;
+                font-size: 1rem;
             }
 
             .project-img {
@@ -27,6 +27,15 @@
                 right: -9999px;
                 margin-left: auto;
                 margin-right: auto;
+            }
+            .btn {
+                @include card(1);
+                bottom:1.5rem;
+                position: absolute;
+            }
+            .btn:active{
+                @include card(0);
+                bottom:1.4rem;
             }
         }
     }

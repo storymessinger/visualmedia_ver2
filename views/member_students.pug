@@ -1,35 +1,7 @@
-extends ./layout
+extends ./layout_main
 
 block css
     link(href="css2/page/member_student.min.css" rel="stylesheet")
-
-block nav
-    div.breadcrumb-row.row
-        ol.breadcrumb.col-xs
-            li
-                img.logo-white(src="img2/logo-white.svg" width="168px")
-            li
-                img.sidebar_btn(src="img/ic_menu_white_36px.svg" fill-opacity="0" width="30px")
-                //- button.sidebar_btn(type="button")
-                //-     img(src="img/ic_menu_white_36px.svg" fill-opacity="0")
-
-            li.breadcrumb-item.active
-                a(href="#") Home
-            li.breadcrumb-item.active
-                a(href="#") People
-            li.breadcrumb-item
-                a(href="#") Students
-
-block sidebar
-    div.sidebar
-        div.sidebar-fixed
-            ul.row.list-group
-                li.list-group-item.list-group-item-action.projects Projects
-                a.list-group-item.list-group-item-action.item_projects(href='#') Ongoing Projects
-                a.list-group-item.list-group-item-action.item_projects(href='#') Finished Projects
-                li.list-group-item.publications Publications
-                a.list-group-item.list-group-item-action.item_publications(href='#') Ongoing Projects
-                a.list-group-item.list-group-item-action.item_publications(href='#') Finished Projects
 
 block content
     .flex-content

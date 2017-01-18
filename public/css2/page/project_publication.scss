@@ -1,88 +1,87 @@
-
 @import 'base';
 @import 'parts/sidebar';
 @import 'parts/breadcrumb';
-
 @import url(http://fonts.googleapis.com/css?family=Merriweather:300italic,300);
 
 .publication-box {
-
-    padding: 5rem 3rem 5rem 3rem;
+    iframe {
+        margin-top: 3rem;
+    }
+    padding: 5rem 3rem;
 
     .imgDiv {
-        padding: 2rem 1rem 2rem 1rem;
+        padding: 2rem 1rem;
+
         .max-img {
             width: 100%;
         }
     }
     ///////////////////////
-
     color: #444;
     font-family: 'Merriweather', Georgia, serif;
     margin: 0;
     max-width: 100%;
     line-height: 1.85;
 
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
 
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
 
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
 
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: "";
-  }
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
 
-    h1,
     .splendor-h1,
-    h2,
     .splendor-h2,
-    h3,
     .splendor-h3,
-    h4,
-    .splendor-h4 {
-      margin: 1.414rem 0 .5rem;
-      font-weight: inherit;
-      line-height: 1.42;
-    }
-
+    .splendor-h4,
     h1,
-    .splendor-h1 {
-      margin-top: 0;
-      font-size: 3.998rem;
-    }
-
     h2,
-    .splendor-h2 {
-      font-size: 2.827rem;
-    }
-
     h3,
-    .splendor-h3 {
-      font-size: 1.999rem;
+    h4 {
+        margin: 1.414rem 0 0.5rem;
+        font-weight: inherit;
+        line-height: 1.42;
     }
 
-    h4,
-    .splendor-h4 {
-      font-size: 1.414rem;
+    .splendor-h1,
+    h1 {
+        margin-top: 0;
+        font-size: 3.998rem;
     }
 
-    h5,
-    .splendor-h5 {
-      font-size: 1.121rem;
+    .splendor-h2,
+    h2 {
+        font-size: 2.827rem;
     }
 
-    h6,
-    .splendor-h6 {
-      font-size: .88rem;
+    .splendor-h3,
+    h3 {
+        font-size: 1.999rem;
     }
 
+    .splendor-h4,
+    h4 {
+        font-size: 1.414rem;
+    }
+
+    .splendor-h5,
+    h5 {
+        font-size: 1.121rem;
+    }
+
+    .splendor-h6,
+    h6 {
+        font-size: 0.88rem;
+    }
 }

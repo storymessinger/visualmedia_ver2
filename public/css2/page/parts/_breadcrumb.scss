@@ -59,3 +59,24 @@
         display: none;
     }
 }
+
+@media (max-width: 575px) {
+    .breadcrumb {
+        flex-flow:row-reverse;
+        // justify-content: flex-end;
+        justify-content: center;
+    }
+    .sidebar_btn {
+        position: fixed;
+        top:2rem;
+        left:2rem;
+    }
+    .logo-white {
+        display: unset;
+        width: 120px;
+    }
+    .breadcrumb-item {
+        display: none;
+    }
+
+}
