@@ -5,7 +5,7 @@ block css
 
 block nav
     nav.navbar.navbar-light.navbar-fixed-top
-        a.navbar-brand(href='#')
+        div.indexPage-nav-btn.navbar-brand
             img(alt="Brand" src="img/logo-h100.svg" width="168")
             //- button.navbar-toggler(type='button' data-toggle="collapse" data-target="#exCollapsingNavbar")
                 div#exCollapsingNavbar.collapse
@@ -26,7 +26,16 @@ block nav
             li.nav-item
                 a.nav-link(href='#') Archives
 
+
+
 block content
+    div.indexPage-nav.invisible
+        div.list-group
+            a.list-group-item(href="#") About
+            a.list-group-item(href="#") People
+            a.list-group-item(href="#") Research
+            a.list-group-item(href="#") News & Events
+            a.list-group-item(href="#") Archives
     .col-xs
         .row.header
             .title
@@ -144,60 +153,3 @@ block content
                                 small.text-muted
                                     | Someone famous in
                                     cite(title='Source Title') Source Title
-//- block footer
-//-     .footer.row.container-fluid
-//-         .col-xs-12
-//-             .row
-//-                 .col-xs-6.col-md-4.footer-brand
-//-                     .footer-brand-img
-//-                         img(alt="footerLogo" src="img/logo_footer.svg")
-//-                     ul
-//-                         li +82 (0)42 350 5918
-//-                         li visualmedia@kaist.ac.kr
-//-                         li 373-1 Guseong-dong. Yueseong-Gu Daejeon, 305-701, South Korea
-//-                 .hidden-md-down.col-md-4.sitemap
-//-                     .row
-//-                         ul.col-xs Member
-//-                             li
-//-                                 a Professor
-//-                             li
-//-                                 a Students
-//-                             li
-//-                                 a Former members
-//-                         ul.col-xs Member
-//-                             li
-//-                                 a Professor
-//-                             li
-//-                                 a Students
-//-                             li
-//-                                 a Former members
-//-                         ul.col-xs Member
-//-                             li
-//-                                 a Professor
-//-                             li
-//-                                 a Students
-//-                             li
-//-                                 a Former members
-//-                         ul.col-xs Member
-//-                             li
-//-                                 a Professor
-//-                             li
-//-                                 a Students
-//-                             li
-//-                                 a Former members
-//-                 //- .hidden-md-down.col-md-2.sitemap
-//-                 //-     ul Member
-//-                 //-         li
-//-                 //-             a Professor
-//-                 //-         li
-//-                 //-             a Students
-//-                 //-         li
-//-                 //-             a Former members
-//-                 .col-xs-6.col-md-4.footer-partner
-//-                     .footer-partner-img
-//-                         img.img-fluid(alt="footerPartner" src="img/partnerLogo4.png")
-//-                     .footer-partner-img
-//-                         img.img-fluid(alt="footerPartner" src="img/partnerLogo2.png")
-//-
-//-             //- .row
-//-             //-     .col-xs.rights 2016 Visual Media Lab. All rights reserved.

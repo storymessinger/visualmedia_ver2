@@ -13,20 +13,31 @@
 
     left:0;
     transition: all 0.5s ease;
+    display: flex;
 
-    li {
-        height: 5rem;
-        padding-top: 1.8rem;
-        width: 100%;
-        font-weight: 600;
-        padding-left: 3rem;
-        cursor: pointer;
-    }
+    .sidebar-fixed{
+        // this is flex
 
-    a {
-        height: 4rem;
-        padding-top: 1.1rem;
-        padding-left: 4rem;
+        position: fixed;
+        height: 100%;
+        width: $sidebar-width - 1rem;
+        align-items: flex-start;
+
+
+        li {
+            height: 5rem;
+            padding-top: 1.8rem;
+            padding-left: 3rem;
+            width: 100%;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        a {
+            height: 4rem;
+            padding-top: 1.1rem;
+            padding-left: 4rem;
+        }
     }
 }
 

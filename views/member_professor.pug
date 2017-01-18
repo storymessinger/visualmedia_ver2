@@ -20,13 +20,14 @@ block nav
 
 block sidebar
     div.sidebar
-        ul.row.list-group
-            li.list-group-item.list-group-item-action.projects Projects
-            a.list-group-item.list-group-item-action.item_projects(href='#') Ongoing Projects
-            a.list-group-item.list-group-item-action.item_projects(href='#') Finished Projects
-            li.list-group-item.publications Publications
-            a.list-group-item.list-group-item-action.item_publications(href='#') Ongoing Projects
-            a.list-group-item.list-group-item-action.item_publications(href='#') Finished Projects
+        div.sidebar-fixed
+            ul.row.list-group
+                li.list-group-item.list-group-item-action.projects Projects
+                a.list-group-item.list-group-item-action.item_projects(href='#') Ongoing Projects
+                a.list-group-item.list-group-item-action.item_projects(href='#') Finished Projects
+                li.list-group-item.publications Publications
+                a.list-group-item.list-group-item-action.item_publications(href='#') Ongoing Projects
+                a.list-group-item.list-group-item-action.item_publications(href='#') Finished Projects
 
 block content
     .flex-content
