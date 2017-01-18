@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var port = process.env.PORT || 3009;
+var port = process.env.PORT || 3007;
 
 //
 // setting pug as the view template engine
@@ -35,5 +35,5 @@ var p2 = require('./routes/p2');
 app.use('/p2',p2);*/
 
 app.listen(port, function(){
-    console.log('connected to 3009 port');
+    console.log('connected to 3007 port');
 });
