@@ -19,6 +19,7 @@ app.use(express.static(__dirname + '/public'));
 // 즉 이걸 안하면 project/ 이후의 경로에 static이 지정되지 않음
 app.use('/project', express.static(__dirname + '/public'));
 app.use('/member', express.static(__dirname + '/public'));
+app.use('/publication', express.static(__dirname + '/public'));
 
 // middleware
 //app.use(require('./middlewares/users'));

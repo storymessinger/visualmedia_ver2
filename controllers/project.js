@@ -15,11 +15,8 @@ router.get('/list', function(req, res) {
     //         data:data
     //     });
     // });
-    res.render('project');
-});
 
-router.get('/publication', function(req,res){
-    res.render('project_publication');
+    res.render('project');
 });
 
 module.exports = router;

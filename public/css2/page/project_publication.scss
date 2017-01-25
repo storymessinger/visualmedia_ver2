@@ -4,6 +4,12 @@
 @import url(http://fonts.googleapis.com/css?family=Merriweather:300italic,300);
 
 .publication-box {
+    color: #444;
+    font-family: 'Merriweather', Georgia, serif;
+    margin: 0;
+    max-width: 100%;
+    line-height: 1.85;
+
     iframe {
         margin-top: 3rem;
     }
@@ -17,12 +23,6 @@
         }
     }
     ///////////////////////
-    color: #444;
-    font-family: 'Merriweather', Georgia, serif;
-    margin: 0;
-    max-width: 100%;
-    line-height: 1.85;
-
     a,
     a:visited {
         text-decoration: underline;

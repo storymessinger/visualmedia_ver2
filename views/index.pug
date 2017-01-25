@@ -5,9 +5,18 @@ html
     link(href="css2/page/index.min.css" rel="stylesheet")
 
     body
+        div.indexPage-nav.invisible
+            div.list-group
+                a(href="#").list-group-item About
+                a(href="/member/professor").list-group-item People
+                a(href="#").list-group-item News/Events
+                a(href="/project/list").list-group-item Project
+                a(href="/publication/2016").list-group-item Publication
+
         nav.navbar.navbar-light.navbar-fixed-top
-            div.indexPage-nav-btn.navbar-brand
-                img(alt="Brand" src="img/logo-h100.svg" width="168")
+            img.menu_btn(src="img2/ic_menu_orange_36px.svg" fill-opacity="0" width="30px")
+            a(href="/").indexPage-nav-btn.navbar-brand
+                img(alt="Brand" src="img2/logo-h100.svg" width="168")
                 //- button.navbar-toggler(type='button' data-toggle="collapse" data-target="#exCollapsingNavbar")
                     div#exCollapsingNavbar.collapse
                         div.bg-inverse.text-muted.p-1
@@ -21,11 +30,11 @@ html
                 li.nav-item
                     a.nav-link(href='/member/professor') People
                 li.nav-item
-                    a.nav-link(href='/project/list') Research
+                    a.nav-link(href='#') News/Events
                 li.nav-item
-                    a.nav-link(href='#') News&Events
+                    a.nav-link(href='/project/list') Project
                 li.nav-item
-                    a.nav-link(href='/project/publication') Archives
+                    a.nav-link(href='/publication/2016') Publication
 
         div.main
             .col-xs

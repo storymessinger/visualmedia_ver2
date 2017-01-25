@@ -3,11 +3,26 @@ extends ./layout_main
 block css
     link(href="css2/page/project_publication.min.css" rel="stylesheet")
 
+block breadcrumbs
+    div.breadcrumb-row.row
+        ol.breadcrumb.col-xs
+            a(href="/")
+                img.logo-white(src="img2/logo-white.svg" width="168px")
+            li
+                img.sidebar_btn(src="img/ic_menu_white_36px.svg" fill-opacity="0" width="30px")
+
+            li.breadcrumb-item
+                a(href="/") Home
+            li.breadcrumb-item
+                a(href="/") Publication
+            li.breadcrumb-item.active
+                a(href="/publication/2016") 2016
+
 block content
     .flex-content.publication-box
         .make_dimmer
         div.content.col-xs.container-fluid
-            div.row.publication-box
+            div.row
 
                 .col-xs-12
                     img(alt="Brand" src="img/logo-h100.svg" width="180")

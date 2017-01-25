@@ -3,6 +3,19 @@ extends ./layout_main
 block css
     link(href="css2/page/project.min.css" rel="stylesheet")
 
+block breadcrumbs
+    div.breadcrumb-row.row
+        ol.breadcrumb.col-xs
+            a(href="/")
+                img.logo-white(src="img2/logo-white.svg" width="168px")
+            li
+                img.sidebar_btn(src="img/ic_menu_white_36px.svg" fill-opacity="0" width="30px")
+
+            li.breadcrumb-item
+                a(href="/") Home
+            li.breadcrumb-item
+                a(href="/") Project
+
 
 block content
     .flex-content

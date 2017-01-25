@@ -5,19 +5,7 @@ html
     block css
 
     body
-        div.breadcrumb-row.row
-            ol.breadcrumb.col-xs
-                li
-                    img.logo-white(src="img2/logo-white.svg" width="168px")
-                li
-                    img.sidebar_btn(src="img/ic_menu_white_36px.svg" fill-opacity="0" width="30px")
-                    //- button.sidebar_btn(type="button")
-                    //-     img(src="img/ic_menu_white_36px.svg" fill-opacity="0")
-
-                li.breadcrumb-item
-                    a(href="/") Home
-                li.breadcrumb-item.active
-                    a(href="/member/students") Professor
+        block breadcrumbs
 
         div.main
 
@@ -37,59 +25,11 @@ html
                         a.list-group-item.list-group-item-action.menuList.item_Projects(href='#') Ongoing Projects
                         a.list-group-item.list-group-item-action.menuList.item_Projects(href='/project/list') Finished Projects
                         li.list-group-item.list-group-item-action.menu Publications
-                        a.list-group-item.list-group-item-action.menuList.item_Publications(href='/project/publication') 2017
-                        a.list-group-item.list-group-item-action.menuList.item_Publications(href='#') 2016
+                        a.list-group-item.list-group-item-action.menuList.item_Publications(href='/publication/2016') 2016
+                        a.list-group-item.list-group-item-action.menuList.item_Publications(href='#') 2015
                         a.list-group-item.list-group-item-action.menuList.item_Publications(href='#') Before 2015
 
             block content
 
-        //- this is the basic footer
-        .footer.row.container-fluid
-            .col-xs-12
-                .row
-                    .col-xs-12.col-sm-6.col-lg-4.footer-brand
-                        .footer-brand-img
-                            img(alt="footerLogo" src="img/logo_footer.svg")
-                        ul
-                            li +82 (0)42 350 5918
-                            li visualmedia@kaist.ac.kr
-                            li 373-1 Guseong-dong. Yueseong-Gu Daejeon, 305-701, South Korea
-                    .hidden-md-down.col-lg-4.sitemap
-                        .row
-                            ul.col-xs Introduction
-                                li
-                                    a(href="#") About us
-                                li
-                                    a(href="#") Partners
-                                li
-                                    a(href="#") Admission
-                            ul.col-xs Member
-                                li
-                                    a(href="#") Professor
-                                li
-                                    a(href="#") Students
-                                li
-                                    a(href="#") Former members
-                            ul.col-xs Research
-                                li
-                                    a(href="#") Projects
-                                li
-                                    a(href="#") Research Area
-                                li
-                                    a(href="#") Publication
-                                li
-                                    a(href="#") Publication(domestic)
-                                li
-                                    a(href="#") Thesis
-                            ul.col-xs News and Events
-                                li
-                                    a(href="#") Recent News
-                                li
-                                    a(href="#") Recent Events
-                    .col-xs-12.col-sm-6.col-lg-4.footer-partner
-                        .footer-partner-img
-                            img.img-fluid(alt="footerPartner" src="img/partnerLogo4.png")
-                        .footer-partner-img
-                            img.img-fluid(alt="footerPartner" src="img/partnerLogo2.png")
 
     include includes/tail.pug

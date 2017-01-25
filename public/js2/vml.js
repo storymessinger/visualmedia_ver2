@@ -1,9 +1,8 @@
 // index page nav toggle
 function indexPageNav_toggle(){
     var $indexPage = $('.indexPage-nav');
-    var $Btn = $('.indexPage-nav-btn');
+    var $Btn = $('.menu_btn');
     $Btn.on('click', function(){
-        console.log('clicked');
         $indexPage.toggleClass('invisible');
     });
 }
