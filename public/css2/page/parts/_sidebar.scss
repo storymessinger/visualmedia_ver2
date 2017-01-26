@@ -51,8 +51,7 @@
     .sidebar {
         position: fixed;
         height: 100vh;
-        width: 16rem;
-        // box-shadow:
+        width: $sidebar-width;
         left:-$sidebar-width;
         z-index: 1001;
 

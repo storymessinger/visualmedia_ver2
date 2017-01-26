@@ -26,6 +26,7 @@
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
     "express-mysql-session": "^1.2.0",
+    "fuse.js": "^2.6.1",
     "gulp": "^3.9.1",
     "gulp-bower": "0.0.13",
     "gulp-sass": "^3.0.0",

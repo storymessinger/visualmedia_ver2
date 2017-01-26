@@ -84,6 +84,9 @@
 }
 
 @media (max-width: 575px) {
+    .search {
+        display: none;
+    }
     .breadcrumb {
         flex-flow:row-reverse;
         // justify-content: flex-end;
