@@ -1,3 +1,11 @@
+function searchBar_Toggle(){
+    var $searchBtn = $('.search_btn');
+    var $searchInput = $('.search_bar');
+    $searchBtn.on('click', function(){
+        $searchInput.focus();
+    });
+}
+
 // index page nav toggle
 function indexPageNav_toggle(){
     var $indexPage = $('.indexPage-nav');
@@ -99,6 +107,7 @@ function init(){
     // sidebar_btn();
     sidebar_btn_new();
     sidebar_open();
+    searchBar_Toggle();
 }
 
 // initiate all the function statements

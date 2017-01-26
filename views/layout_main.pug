@@ -5,7 +5,17 @@ html
     block css
 
     body
-        block breadcrumbs
+        div.breadcrumb-row.row
+            ol.breadcrumb.col-xs
+                a(href="/")
+                    img.logo-white(src="img2/logo-white.svg" width="168px")
+                li
+                    img.sidebar_btn(src="img/ic_menu_white_36px.svg" fill-opacity="0" width="30px")
+                li.search
+                    img.search_btn(src="img2/ic_zoom_in_white_36px.svg" fill-opacity="0" width="30px")
+                    input.search_bar
+
+                block breadcrumbs
 
         div.main
 

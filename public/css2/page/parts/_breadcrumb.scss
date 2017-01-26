@@ -30,6 +30,29 @@
         display: flex;
         align-items: center;
         margin: 0;
+        .search {
+            position: absolute;
+            right: 3rem;
+            .search_btn {
+                cursor: pointer;
+            }
+            input {
+                width: 55px;
+                transition: width 0.25s ease-in-out;
+
+                border: none;
+                background: transparent;
+                margin-left: 0.5rem;
+                border-bottom: 1.8px white solid;
+                color: white;
+                font-weight:300;
+                font-size: 0.95rem;
+            }
+            input:focus {
+                outline: none;
+                width: 250px;
+            }
+        }
         a {
             color: #fff;
         }
