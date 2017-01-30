@@ -1,44 +1,47 @@
+
 // import the variables :)
 @import 'variables';
-
+.flex-content {
+    margin-left: $sidebar-width;
+}
 .sidebar {
-
-    // this means flex-grow is 0
-    flex: 0 0 $sidebar-width;
-
     background-color: #fff;
-    border-right: 1px solid $primary_light_grey;
-
-    // list-group-item-active와 sidebar를 맞추려고 패딩오른쪽줌
-    padding-right: 1rem;
-
-
-    left:0;
     transition: all 0.5s ease;
+    position: fixed;
+    height: 100vh;
+    width: $sidebar-width;
+    left: 0;
+    z-index: 1001;
     display: flex;
+    overflow-y: auto;
 
-    .sidebar-fixed{
-        // this is flex
+    border-right: 1px solid $primary_light_grey;
+    .sidebarInner {
+        // flex: 1;
+        // height: 3000px;
+        // display: flex;
+        min-height: 100%;
+        position: relative;
 
-        position: fixed;
-        height: 100%;
-        width: $sidebar-width - 1rem;
-        align-items: flex-start;
+        padding-bottom: 96px;
+        nav {
+            font-size: 13px;
+            padding: 12px 0 10px;
+            dt {
+                font-weight: 700;
+                padding: 11px 0 11px 22px;
+                cursor: pointer;
+            }
+            dd a {
+                display: block;
 
-
-        li {
-            height: 5rem;
-            padding-top: 1.8rem;
-            padding-left: 3rem;
-            width: 100%;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        a {
-            height: 4rem;
-            padding-top: 1.1rem;
-            padding-left: 4rem;
+                font-weight: 400;
+                letter-spacing: .1px;
+                padding: 8px 10px 8px 46px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
         }
     }
 }
@@ -46,19 +49,14 @@
 .sidebar_btn {
     display: none;
 }
+
 //// Sidebar under 1200px
 @media (max-width: 1199px) {
+    .flex-content {
+        margin-left: 0;
+    }
     .sidebar {
-        position: fixed;
-        height: 100vh;
-        width: $sidebar-width;
         left:-$sidebar-width;
-        z-index: 1001;
-
-        // remove border-right
-        border-right: 1px solid #fff;
-
-        // onClick sidebar_tn, this gets toggled on
     }
     .open {
         left: 0rem;
@@ -66,7 +64,6 @@
     .sidebar_btn {
         display: unset;
     }
-//// End Sidebar under 1200px
 
 //// Dimmer
     // make background dimmer when sidebar opened
@@ -75,8 +72,6 @@
         display:none;
     }
 
-    // toggle dimmer on a
-    // div.make_dimmer when sidebar is unfolded
     .dimmer {
         display:block;
         background:#000;
@@ -90,4 +85,3 @@
         height:100%;
     }
 }
-//// Dimmer end

@@ -20,24 +20,47 @@ html
         div.main
 
             div.sidebar
-                div.sidebar-fixed
-                    ul.row.list-group
-                        li.list-group-item.list-group-item-action.menu About
-                        a.list-group-item.list-group-item-action.menuList.item_About(href='#') Visual Media Lab
-                        a.list-group-item.list-group-item-action.menuList.item_About(href='#') Contanct
-                        li.list-group-item.list-group-item-action.menu People
-                        a.list-group-item.list-group-item-action.menuList.item_People(href='/member/professor') Professor
-                        a.list-group-item.list-group-item-action.menuList.item_People(href='/member/students') Students
-                        li.list-group-item.list-group-item-action.menu News-Events
-                        a.list-group-item.list-group-item-action.menuList.item_News-Events(href='#') News
-                        a.list-group-item.list-group-item-action.menuList.item_News-Events(href='#') Events
-                        li.list-group-item.list-group-item-action.menu Projects
-                        a.list-group-item.list-group-item-action.menuList.item_Projects(href='#') Ongoing Projects
-                        a.list-group-item.list-group-item-action.menuList.item_Projects(href='/project/list') Finished Projects
-                        li.list-group-item.list-group-item-action.menu Publications
-                        a.list-group-item.list-group-item-action.menuList.item_Publications(href='/publication/2016') 2016
-                        a.list-group-item.list-group-item-action.menuList.item_Publications(href='#') 2015
-                        a.list-group-item.list-group-item-action.menuList.item_Publications(href='#') Before 2015
+                div.sidebarInner
+                    nav
+                        dl
+                            dt.nav_expanded Project
+                            div(style="overflow: hidden")
+                                dd
+                                    a.nav_selected(href="#") Introduction
+                                    a(href="#") second
+                                    a(href="#") third
+                        dl
+                            dt Publication
+                            div(style="overflow: hidden")
+                                dd
+                                    a(href="#") Introduction
+                                    a(href="#") second
+                                    a(href="#") third
+                        dl
+                            dt.nav_expanded Project
+                            div(style="overflow: hidden")
+                                dd
+                                    a.nav_selected(href="#") Introduction
+                                    a(href="#") second
+                                    a(href="#") third
+                        dl
+                            dt test
+                            div(style="overflow: hidden")
+                                dd
+                                    a(href="#") Introduction
+                                    a(href="#") second
+                                    a(href="#") third
+                                    a(href="#") Introduction
+                                    a(href="#") second
+                                    a(href="#") third
+                                    a(href="#") Introduction
+                                    a(href="#") second
+                                    a(href="#") third
+                                    a(href="#") Introduction
+                                    a(href="#") second
+                                    a(href="#") third
+                    div.legal
+
 
             block content
 

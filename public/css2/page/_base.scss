@@ -1,4 +1,4 @@
-// import the variables :)
+
 @import 'parts/variables';
 
 // this is custom scss file
@@ -14,7 +14,7 @@ html {
     // fixes overflowing bug in the x.
     // think it may have to do with breadcrumbs.
     // should find out
-    overflow-x:hidden;
+    // overflow-x:hidden;
 }
 
 // this is for the holyGrail layout
@@ -25,10 +25,6 @@ body {
 
     .main {
         display: flex;
-        // if there is sidebar, sidebar will have width of 16rem
-        .sidebar {
-            flex: 0 0 $sidebar-width;
-        }
         .flex-content {
             flex-grow:1;
             display: flex;
