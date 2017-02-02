@@ -59,16 +59,6 @@ function indexPageNav_toggle(){
     });
 }
 
-// student member function
-function student_touch() {
-    var $student_card = $('.card');
-    $student_card.on('mouseenter',function(){
-        $(this).addClass('member_touch');
-    });
-    $student_card.on('mouseleave',function(){
-        $(this).removeClass('member_touch');
-    });
-}
 // siebar menu margin function
 function sidebar_navmenu_margin(){
     var $navmenu = $('.sidebar dt');
@@ -156,7 +146,6 @@ function init(){
     projectImgBtn();
     sidebar_navmenu_margin();
     indexPageNav_toggle();
-    student_touch();
     // sidebar_btn();
     sidebar_btn_new();
     sidebar_open();

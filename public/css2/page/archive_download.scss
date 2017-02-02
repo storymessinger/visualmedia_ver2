@@ -1,4 +1,4 @@
-//out:project_publication_list.min.css
+//out:archive_download.min.css
 @import 'base';
 @import 'parts/breadcrumb';
 @import 'parts/sidebar';
@@ -12,27 +12,31 @@
         margin-bottom: 3rem;
     }
 }
-.publication-box {
+.download-box {
     display:flex;
     margin-bottom: 3rem;
 
-    .publication-img {
+    .download-img {
         min-width: 240px;
         width: 240px;
         height: 160px;
         background-color: black;
     }
-    .publication-desc {
+    .download-desc {
         margin: 0 2rem 0 2rem;
         color: $primary_grey;
         h5, h3 {
             color: $primary_dark_grey;
         }
-        .publication-text {
+        .download-text {
             margin-bottom: 1rem;
         }
-        .publication-desc-title {
-
+    }
+    .download-type {
+        min-width: 240px;
+        width: 240px;
+        p {
+            margin-bottom: 0.5rem;
         }
     }
 
@@ -40,17 +44,17 @@
 
 
 @media (max-width: 991px) {
-
-}
-@media (max-width: 575px) {
-    .publication-box {
+    .download-box {
         flex-flow:column;
-        .publication-desc {
+        .download-desc {
             margin: 2rem 0 2rem 0;
         }
     }
-    .publication-img {
+    .download-img {
         width:100% !important;
     }
 
+
+}
+@media (max-width: 575px) {
 }

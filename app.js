@@ -4,7 +4,6 @@ var port = process.env.PORT || 3007;
 
 //
 // setting pug as the view template engine
-// app.engine('pug', require('pug').__express);
 app.set('view engine', 'pug');
 app.set('views', __dirname + '/views');
 
@@ -12,7 +11,6 @@ app.set('views', __dirname + '/views');
 app.locals.pretty = true;
 
 // making the 'public' folder for the static assets folder
-//app.use('/user', express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/public'));
 // 제길..실제 파일시스템에 존재하지않는 가상경로를 작성하려면, 아래에 표시된 것처럼
 // 정적 디렉토리에 대한 마운트 경로를 지정해야 한단다
@@ -20,6 +18,9 @@ app.use(express.static(__dirname + '/public'));
 app.use('/project', express.static(__dirname + '/public'));
 app.use('/member', express.static(__dirname + '/public'));
 app.use('/publication', express.static(__dirname + '/public'));
+app.use('/news', express.static(__dirname + '/public'));
+app.use('/archive', express.static(__dirname + '/public'));
+app.use('/about', express.static(__dirname + '/public'));
 
 // middleware
 //app.use(require('./middlewares/users'));

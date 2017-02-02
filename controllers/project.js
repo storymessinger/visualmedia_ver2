@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 // var Project = require('../models/project_db');
 
-router.get('/list', function(req, res) {
+router.get('/', function(req, res) {
     // Project.get(req.params.id, function(err, data){
     //
     //     if(err){
@@ -16,7 +16,7 @@ router.get('/list', function(req, res) {
     //     });
     // });
 
-    res.render('project');
+    res.render('project_list');
 });
 
 module.exports = router;

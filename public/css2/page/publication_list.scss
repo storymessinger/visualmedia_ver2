@@ -1,0 +1,56 @@
+//out:publication_list.min.css
+@import 'base';
+@import 'parts/breadcrumb';
+@import 'parts/sidebar';
+
+.year {
+    border-top: 1px solid #ccc;
+    padding: 2rem 3rem 3rem;
+    flex-flow:column;
+    .year-title {
+        color: $primary_grey;
+        margin-bottom: 3rem;
+    }
+}
+.publication-box {
+    display:flex;
+    margin-bottom: 3rem;
+
+    .publication-img {
+        min-width: 240px;
+        width: 240px;
+        height: 160px;
+        background-color: black;
+    }
+    .publication-desc {
+        margin: 0 2rem 0 2rem;
+        color: $primary_grey;
+        h5, h3 {
+            color: $primary_dark_grey;
+        }
+        .publication-text {
+            margin-bottom: 1rem;
+        }
+        .publication-desc-title {
+
+        }
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+}
+@media (max-width: 575px) {
+    .publication-box {
+        flex-flow:column;
+        .publication-desc {
+            margin: 2rem 0 2rem 0;
+        }
+    }
+    .publication-img {
+        width:100% !important;
+    }
+
+}

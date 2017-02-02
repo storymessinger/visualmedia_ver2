@@ -1,0 +1,67 @@
+extends ./layout_main
+
+block css
+    link(href="css2/page/about_us.min.css" rel="stylesheet")
+
+block breadcrumbs
+    li.breadcrumb-item
+        a(href="/") home
+    li.breadcrumb-item
+        a(href="/") Project
+
+
+block content
+    .flex-content
+        .make_dimmer
+        div.content.col-xs.container-fluid
+            div.row.year
+                h2.about-title
+                    | About Visual Media Lab
+                div.about-box
+                    div.about-img
+                        img.intro(src="img2/about_us_intro.png")
+                    div.about-desc
+                        h3.about-text
+                            | The Visual Media Lab (VML) in the Graduate School of Culture Technology (GSCT) at KAIST
+                        .about-text
+                            | is where technology and creativity meet. VML focuses on developing fundamental computer graphics technology and software applications specifically for the creation of movie visual effects and animated films. The main research area includes character animation, fluid simulation, and stereoscopic visualization. Since its foundation in 2006, VML has emphasized both R&D and contents production as a core part of lab activity. About 20 Ph.D. and master program partners along with more than 10 digital artists have published numerous papers at premium graphics conferences and showcased animations at international computer animation festivals. The close relationship with industry has allowed VML to contribute its technology to recently released movies.
+                h2.about-title
+                    | Contact Us
+                div.about-box
+                    div.about-desc
+                        h4.about-text
+                            | Mailing Address
+                        .about-text
+                            | Visual Media Lab, KAIST <br>
+                            | 373-1 Guseong-dong, Yuseong-gu Daejeon, 305-701, Republic of Korea <br><br>
+                            | <strong>Tel :</strong> +82-42-350-5918 <br>
+                            | <strong>Email :</strong> visualmedia_at_kaist.ac.kr <br>
+
+                    div.about-img
+                        img.map(src="img2/about_us_map.png")
+                h2.about-title
+                    | Partners
+                div.member_image_box.col-xs-12
+                    // card container
+                    div.partner-box.col-xs-12.col-md-4.col-lg-3
+                        div.partner-img
+                            img(src="img2/partnerLogo1.png" alt="Partner Company Img")
+                    // card container
+                    div.partner-box.col-xs-12.col-md-4.col-lg-3
+                        div.partner-img
+                            img(src="img2/partnerLogo2.png" alt="Partner Company Img")
+                    // card container
+                    div.partner-box.col-xs-12.col-md-4.col-lg-3
+                        div.partner-img
+                            img(src="img2/partnerLogo3.png" alt="Partner Company Img")
+                    // card container
+                    div.partner-box.col-xs-12.col-md-4.col-lg-3
+                        div.partner-img
+                            img(src="img2/partnerLogo4.png" alt="Partner Company Img")
+                    // card container
+                    div.partner-box.col-xs-12.col-md-4.col-lg-3
+                        div.partner-img
+                            img(src="img2/partnerLogo5.png" alt="Partner Company Img")
+                    div.partner-box.col-xs-12.col-md-4.col-lg-3
+                        div.partner-img
+                            img(src="img2/partnerLogo6.png" alt="Partner Company Img")
