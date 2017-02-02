@@ -7,11 +7,11 @@ html
     body
         div.indexPage-nav.invisible
             div.list-group
-                a(href="#").list-group-item About
+                a(href="/about/us").list-group-item About
                 a(href="/member/professor").list-group-item People
-                a(href="#").list-group-item News/Events
-                a(href="/project/list").list-group-item Project
-                a(href="/publication/2016").list-group-item Publication
+                a.disable.list-group-item News/Events
+                a(href="/project").list-group-item Project
+                a(href="/publication").list-group-item Publication
 
         nav.navbar.navbar-light.navbar-fixed-top
             img.menu_btn(src="img2/ic_menu_orange_36px.svg" fill-opacity="0" width="30px")
@@ -30,11 +30,11 @@ html
                 li.nav-item
                     a.nav-link(href='/member/professor') People
                 li.nav-item
-                    a.nav-link(href='#') News/Events
+                    a.disable.nav-link News/Events
                 li.nav-item
-                    a.nav-link(href='/project/list') Project
+                    a.nav-link(href='/project') Project
                 li.nav-item
-                    a.nav-link(href='/publication/2016') Publication
+                    a.nav-link(href='/publication') Publication
 
         div.main
             .col-xs

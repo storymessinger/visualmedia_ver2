@@ -15,6 +15,7 @@
     // row
     display: flex;
     flex-wrap:wrap;
+    justify-content: center;
     max-width: 1250px;
 
     padding: 2rem 0 2rem 0;
@@ -25,12 +26,13 @@
             -webkit-filter: grayscale(100%) contrast(80%);
         }
         .student-img {
-            clip-path: circle(100px at center);
             display: flex;
             flex-flow: column;
             align-items: center;
             img {
+                border-radius: 50%;
                 margin: 0 auto;
+                margin-bottom: 1.5rem;
                 width: 250px;
             }
         }

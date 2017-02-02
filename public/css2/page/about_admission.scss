@@ -27,7 +27,6 @@
             -webkit-filter: grayscale(100%) contrast(80%);
         }
         .partner-img {
-            clip-path: circle(100px at center);
             overflow:hidden;
 
             display: flex;
@@ -36,6 +35,7 @@
             // margin: 0 2.5rem 2rem 2.5rem;
             margin-bottom: 2rem;
             img {
+                border-radius: 50%;
                 width: 100%;
             }
         }
