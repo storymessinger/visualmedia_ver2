@@ -27,7 +27,19 @@ $searchInput.keypress(function(event){
         return false;
     }
 });
+//
 
+function projectImgBtn() {
+    var $project_img = $('.project-img');
+    $project_img.mouseenter(function(){
+        $(this).css({"filter": "grayscale(70%) contrast(60%)"});
+        $(this).siblings('div').find('p').css({"opacity":"1"});
+    });
+    $project_img.mouseleave(function(){
+        $(this).css({"filter":"grayscale(0%) contrast(100%)"});
+        $(this).siblings('div').find('p').css({"opacity":"0"});
+    });
+}
 
 // search bar toogle
 function searchBar_Toggle(){
@@ -141,6 +153,7 @@ function sidebar_open() {
 
 
 function init(){
+    projectImgBtn();
     sidebar_navmenu_margin();
     indexPageNav_toggle();
     student_touch();

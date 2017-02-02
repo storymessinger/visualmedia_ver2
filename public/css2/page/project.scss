@@ -15,9 +15,6 @@
             position: relative;
             overflow: hidden;
             border: none;
-            h5 {
-                font-weight: 400;
-            }
             .card-header {
                 border: none;
                 background-color: inherit;
@@ -37,6 +34,15 @@
 
             span {
                 font-size: 1rem;
+            }
+            .overlay {
+                position:absolute;
+                padding: 2.5rem 0 0 2.5rem;
+                p {
+                    font-size:1.1rem;
+                    opacity: 0;
+                    color:white;
+                }
             }
 
             .project-img {
@@ -79,13 +85,6 @@
     .card-text {
         margin-bottom: 1rem !important;
     }
-    h2 {
-        font-size: 1.6rem;
-    }
-    h5 {
-        font-size: 1rem;
-    }
-
 }
 @media (max-width: 575px) {
 
