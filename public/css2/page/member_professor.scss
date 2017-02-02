@@ -1,7 +1,7 @@
+//out:member_professor.min.css
 @import 'base';
 @import 'parts/breadcrumb';
 @import 'parts/sidebar';
-
 .content-row {
     // fixing row under col margin bug
     margin : 0;
@@ -11,6 +11,7 @@
     .card {
         // width error fix
         margin: 0 1rem 0 1rem;
+        overflow:auto;
         img {
             padding-right: 1.25rem;
             padding-left: 1.25rem;
@@ -24,6 +25,11 @@
     .card-subtitle {
         font-weight: bold;
         line-height: 1.85;
+    }
+}
+@media (max-width:767px){
+    .member_image_box {
+        justify-content: center;
     }
 }
 

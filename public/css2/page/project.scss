@@ -4,8 +4,8 @@
 @import 'parts/sidebar';
 
 .project-box {
-    margin: 2rem 3rem 3rem;
     border-top: 1px solid #ccc;
+    padding: 2rem 3rem 3rem;
 
     .card-box {
         padding: 0 0.5rem;
@@ -14,6 +14,26 @@
             height: 25rem;
             position: relative;
             overflow: hidden;
+            border: none;
+            h5 {
+                font-weight: 400;
+            }
+            .card-header {
+                border: none;
+                background-color: inherit;
+            }
+            .card-text {
+                margin-bottom: 1.2rem;
+            }
+            .card-desc {
+                display: flex;
+                .card-desc-title {
+                    margin-right: 1.8rem;
+                }
+                .card-desc-text {
+
+                }
+            }
 
             span {
                 font-size: 1rem;
@@ -56,5 +76,17 @@
 }
 
 @media (max-width: 991px) {
+    .card-text {
+        margin-bottom: 1rem !important;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    h5 {
+        font-size: 1rem;
+    }
+
+}
+@media (max-width: 575px) {
 
 }
