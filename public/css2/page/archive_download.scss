@@ -14,7 +14,7 @@
 }
 .download-box {
     display:flex;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 
     .download-img {
         min-width: 240px;
@@ -23,7 +23,7 @@
         background-color: black;
     }
     .download-desc {
-        margin: 0 2rem 0 2rem;
+        margin: 0 1.5rem;
         color: $primary_grey;
         h5, h3 {
             color: $primary_dark_grey;

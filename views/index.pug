@@ -5,13 +5,14 @@ html
     link(href="css2/page/index.min.css" rel="stylesheet")
 
     body
-        div.indexPage-nav.invisible
+        //- div.indexPage-nav.invisible
+        div.indexPage-nav
             div.list-group
                 a(href="/about/us").list-group-item About
-                a(href="/member/professor").list-group-item People
-                a.disable.list-group-item News/Events
-                a(href="/project").list-group-item Project
-                a(href="/publication").list-group-item Publication
+                a(href="/member/professor").list-group-item Member
+                a(href="/project").list-group-item Research
+                a(href="/news").list-group-item News and Events
+                a(href="/archive/download").list-group-item Archive
 
         nav.navbar.navbar-light.navbar-fixed-top
             img.menu_btn(src="img2/ic_menu_orange_36px.svg" fill-opacity="0" width="30px")
@@ -24,17 +25,19 @@ html
                             span.text-muted Toggleable via the navbar brand.
             ul.nav.navbar-nav
                 li.nav-item.active
-                    a.nav-link(href='#')
-                        | About
-                        span.sr-only (current)
+                    a.nav-link(href='/about/us') About
                 li.nav-item
-                    a.nav-link(href='/member/professor') People
+                    a.nav-link(href='/member/professor') Member
                 li.nav-item
-                    a.disable.nav-link News/Events
+                    a.nav-link(href='/project') Research
                 li.nav-item
-                    a.nav-link(href='/project') Project
+                    a.nav-link(href='/news') News & Events
                 li.nav-item
-                    a.nav-link(href='/publication') Publication
+                    a.nav-link(href='/archive/download') Archive
+            ul.search-nav
+                li.search
+                    img.search_btn(src="img2/ic_zoom_in_orange_36px.svg" fill-opacity="0" width="30px")
+                    input.search_bar
 
         div.main
             .col-xs
