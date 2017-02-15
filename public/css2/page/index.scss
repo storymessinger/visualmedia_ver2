@@ -3,10 +3,15 @@
 @import 'parts/nav';
 @import 'parts/footer';
 
-////////////// TEST ///////////////////
 .main .col-xs {
     padding:0;
 }
+
+// for overlay noscroll issue
+.noscroll {
+    overflow: hidden;
+}
+
 
 .menu_btn {
     display: none;

@@ -56,6 +56,7 @@ function indexPageNav_toggle(){
     var $Btn = $('.menu_btn');
     $Btn.on('click', function(){
         $indexPage.toggleClass('invisible');
+        $('body').toggleClass('noscroll');
     });
 }
 
