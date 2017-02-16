@@ -10,7 +10,7 @@
 .member_image_box {
     .card {
         // width error fix
-        margin: 0 1rem 0 1rem;
+        border: 0;
         overflow:auto;
         img {
             padding-right: 1.25rem;
@@ -20,16 +20,11 @@
     display: flex;
     flex-direction: row-reverse;
 
-    padding: 3rem 1rem 1rem 0;
+    padding: 3rem 2rem;
 
     .card-subtitle {
         font-weight: bold;
         line-height: 1.85;
-    }
-}
-@media (max-width:767px){
-    .member_image_box {
-        justify-content: center;
     }
 }
 
@@ -38,7 +33,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 5rem 0 3rem 0rem;
+    padding: 3rem 2rem;
+    margin-top: 2rem;
 
 
     .member_desc {
@@ -64,5 +60,12 @@
         width: 100%;
 
         margin: 1.5rem 0 1.5rem 0;
+    }
+}
+
+@media (max-width:991px){
+    .member_desc_box {
+        margin-top: 0;
+        padding-top: 0;
     }
 }

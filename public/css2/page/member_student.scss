@@ -19,6 +19,14 @@
     max-width: 1250px;
 
     padding: 2rem 0 2rem 0;
+    .member-status {
+        text-align: center;
+        margin: 4rem 0;
+    }
+    hr {
+        width: 100px;
+        border-top: 3px $primary_orange solid;
+    }
     .student-box {
         margin-bottom: 2rem;
 

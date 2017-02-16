@@ -7,8 +7,8 @@ router.get('/download',function(req,res){
     res.render('archive_download');
 });
 
-router.get('/seminar', function(req,res){
-    res.render('archive_seminar');
+router.get('/weekly', function(req,res){
+    res.render('archive_weekly');
 });
 
 module.exports = router;

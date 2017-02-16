@@ -1,0 +1,63 @@
+//out:archive_weekly.min.css
+@import 'base';
+@import 'parts/breadcrumb';
+@import 'parts/sidebar';
+
+.year {
+    border-top: 1px solid #ccc;
+    padding: 2rem 3rem 3rem;
+    flex-flow:column;
+    .year-title {
+        color: $primary_grey;
+        margin-bottom: 3rem;
+    }
+}
+.weekly-box {
+    display:flex;
+    margin-bottom: 5rem;
+
+    .weekly-img {
+        min-width: 240px;
+        width: 240px;
+        height: 160px;
+        background-color: black;
+    }
+    .weekly-desc {
+        display: flex;
+        flex-flow:column;
+        margin: 0 1.5rem;
+        color: $primary_grey;
+        h5, h3 {
+            color: $primary_dark_grey;
+        }
+        .weekly-text {
+            flex-grow: 1;
+            margin-bottom: 1rem;
+        }
+    }
+    .weekly-type {
+        min-width: 240px;
+        width: 240px;
+        p {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+}
+
+
+@media (max-width: 991px) {
+    .weekly-box {
+        flex-flow:column;
+        .weekly-desc {
+            margin: 2rem 0 2rem 0;
+        }
+    }
+    .weekly-img {
+        width:100% !important;
+    }
+
+
+}
+@media (max-width: 575px) {
+}

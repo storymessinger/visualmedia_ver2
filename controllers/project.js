@@ -19,4 +19,8 @@ router.get('/', function(req, res) {
     res.render('project_list');
 });
 
+router.get('/2016', function(req,res){
+    res.render('project_desc');
+});
+
 module.exports = router;

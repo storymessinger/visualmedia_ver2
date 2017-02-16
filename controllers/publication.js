@@ -11,7 +11,7 @@ router.get('/domestic',function(req,res){
 });
 
 router.get('/2016', function(req,res){
-    res.render('publication');
+    res.render('publication_desc');
 });
 
 module.exports = router;

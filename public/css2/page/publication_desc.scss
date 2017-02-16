@@ -1,4 +1,4 @@
-//out:publication.min.css
+//out:publication_desc.min.css
 @import 'base';
 @import 'parts/sidebar';
 @import 'parts/breadcrumb';
@@ -23,6 +23,11 @@
         }
     }
     ///////////////////////
+    p,
+    strong {
+        font-size: 1.1rem;
+    }
+
     a,
     a:visited {
         text-decoration: underline;

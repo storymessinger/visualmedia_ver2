@@ -1,0 +1,88 @@
+extends ./layout_main
+
+block css
+    link(href="css2/page/project_desc.min.css" rel="stylesheet")
+
+block breadcrumbs
+    li.breadcrumb-item
+        a(href="/") Home
+    li.breadcrumb-item
+        a(href="/project") Project
+    li.breadcrumb-item.active
+        a(href="/project/2016") 2016
+
+block content
+    .flex-content.publication-box
+        .make_dimmer
+        div.content.col-xs.container-fluid
+            div.row
+
+                //- .col-xs-12
+                //-     h2 Content-based representation and retrieval of visual media: A state-of-the-art review
+                //- .col-xs-12
+                //-     h4 Author1, Author2, Author3, Author4, Author5, Author6
+                //-     h4
+                //-     h5 Journal: Journal: ACM Transaction on Graphics, Volume 35, Issue 4, p.63:1-63:11, July 2016 Conference : ACM SIGGRAPH, 2016
+                //-     h5 Paper (25.6MB PDF) / Slides (PPTX, 204.3MB) / Videos / Supplemental document / Code (ZIP, 43.2MB) / Datasets
+                //-
+                .col-xs-12.part.imgDiv
+                    .title
+                        h1 Computing for lazy life
+
+                .col-xs-12.part
+                    h3 CFL2
+                    hr
+                    strong Human Computer Interaction, Image Processing, Physically-based Simulation
+                    p CFL2 stands for Computing For Lazy Life. Lazy life in this term denotes comfortable life obtained from technology. We develop interactive techniques to enrich user experiences, especially through computer graphics and vision technology. Our current research addresses modeling an immersive home entertainment environment through video analysis, 3D geometry reconstruction, new paradigm visualization, and exploration of unique hardware setups that work with human sensing-based interaction
+
+                .col-xs-12.part
+                    h3 Related Thesis
+                    hr
+                    strong "Auto-Calibration of Multi-Projector Displays with a Single Handheld Camera", 2015
+                    p "Heterogeneous CPU-GPU Parallel Approach to a Multigrid Poisson Solver for Incompressible Fluid Simulation", 2013
+                    p "Realistic Paint Simulation based on Fluidity, Diffusion, and A   l for Viscous Fingering", 2012
+                    p "Multilinear Fluid Simulation with Model Reduction for Pressure Projection", 2011
+                    p "A Smoke Visualization Model for Capturing Surface-like Features", 2011
+                    p "Simulating SPH Fluid with Multi-Level Vorticity", 2011
+                    p "Multilevel vorticity confinement for water turbulence simulati  on", 2010
+                    p "A Hybrid Approach to Multiple Fluid Simulation using Volume Fractions", 2010
+                    p "Cartoon Animation Style Rendering of Water", 2009
+                    p "A surface-based model for small-scale smoke visualization", 2009
+                    p "Toon Rendering of Water Animation", 2009
+                    p "A Unified Handling of Immiscible and Miscible Fluids", 2008
+                    p "Low Viscosity Flow Simulations for Animation", 2008
+
+                .col-xs-12.part
+                    h3 Members
+                    hr
+                    .col-xs-12.member_image_box
+                        // card container
+                        div.student-box.col-xs-12.col-md-6.col-lg-4
+                            div.student-img
+                                img(src="img2/member_student.jpg" alt="Professor profile img")
+                            div.student-text
+                                h5.name Bumki Kim <sub>Head Student</sub>
+                                h6 INTERESTED TOPICS
+                                p Computer Graphics / Video Projection
+                                h6 E-MAIL
+                                p bumkikim@kaist.ac.kr
+                        // card container
+                        div.student-box.col-xs-12.col-md-6.col-lg-4
+                            div.student-img
+                                img(src="img2/member_student.jpg" alt="Professor profile img")
+                            div.student-text
+                                h5.name Bumki Kim <sub>Head Student</sub>
+                                h6 INTERESTED TOPICS
+                                p Computer Graphics / Video Projection
+                                h6 E-MAIL
+                                p bumkikim@kaist.ac.kr
+                        // card container
+                        div.student-box.col-xs-12.col-md-6.col-lg-4
+                            div.student-img
+                                img(src="img2/member_student.jpg" alt="Professor profile img")
+                            div.student-text
+                                h5.name Bumki Kim <sub>Head Student</sub>
+                                h6 INTERESTED TOPICS
+                                p Computer Graphics / Video Projection
+                                h6 E-MAIL
+                                p bumkikim@kaist.ac.kr

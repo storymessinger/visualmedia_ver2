@@ -1,0 +1,41 @@
+extends ./layout_main
+
+block css
+    link(href="css2/page/publication_desc.min.css" rel="stylesheet")
+
+block breadcrumbs
+    li.breadcrumb-item
+        a(href="/") Home
+    li.breadcrumb-item
+        a(href="/publication") Publication
+    li.breadcrumb-item.active
+        a(href="/publication/2016") 2016
+
+block content
+    .flex-content.publication-box
+        .make_dimmer
+        div.content.col-xs.container-fluid
+            div.row
+
+                .col-xs-12
+                    img(alt="Brand" src="img/logo-h100.svg" width="180")
+
+                .col-xs-12
+                    h2 Content-based representation and retrieval of visual media: A state-of-the-art review
+                .col-xs-12
+                    h4 Author1, Author2, Author3, Author4, Author5, Author6
+                    h4
+                    h5 Journal: Journal: ACM Transaction on Graphics, Volume 35, Issue 4, p.63:1-63:11, July 2016 Conference : ACM SIGGRAPH, 2016
+                    h5 Paper (25.6MB PDF) / Slides (PPTX, 204.3MB) / Videos / Supplemental document / Code (ZIP, 43.2MB) / Datasets
+
+                .col-xs-12.imgDiv
+                    img.max-img(alt="publication-img" src="img/Home_MainPic_resize.jpg")
+
+                .col-xs-12
+                    h6
+                    strong Abstract 
+                    p This paper introduces ScreenX, which is a novel movie viewing platform that enables ordinary movie theatres to become multi-projection movie theatres. This enables the general public to enjoy immersive viewing experiences. The left and right side walls are used to form surrounding screens. This surrounding display environment delivers a strong sense of immersion in general movie viewing. However, naive display of the content on the side walls results in the appearance of distorted images according to the location of the viewer. In addition, the different dimensions in width, height, and depth among theatres may lead to different viewing experiences. Therefore, for successful deployment of this novel platform, an approach to providing similar movie viewing experiences across target theatres is presented. The proposed image representation model ensures minimum average distortion of the images displayed on the side walls when viewed from different locations. Furthermore, the proposed model assists with determining the appropriate variation of the content according to the diverse viewing environments of different theatres. The theatre suitability estimation method excludes outlier theatres that have extraordinary dimensions. In addition, the content production guidelines indicate appropriate regions to place scene elements for the side wall, depending on their importance. The experiments demonstrate that the proposed method improves the movie viewing experiences in ScreenX theatres. Finally, ScreenX and the proposed techniques are discussed with regard to various aspects and the research issues that are relevant to this movie viewing platform are summarized.
+                .col-xs-12.videoWrapper
+                    //- iframe height ratio problem is solved by bootstrap, which applies to all iframe .. etc directly for videos
+                    iframe(width="1280" height="720" src="https://www.youtube.com/embed/ZVEAHutpv0M" frameborder="0" allowfullscreen)
+                    //- iframe(src="https://www.youtube.com/embed/ZVEAHutpv0M")
