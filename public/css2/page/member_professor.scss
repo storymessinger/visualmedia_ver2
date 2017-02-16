@@ -5,16 +5,19 @@
 .content-row {
     // fixing row under col margin bug
     margin : 0;
+    flex-flow: column;
+    align-items: center;
 }
 
 .member_image_box {
     .card {
         // width error fix
         border: 0;
-        overflow:auto;
         img {
+            border-radius: 50%;
             padding-right: 1.25rem;
             padding-left: 1.25rem;
+            width: 100%;
         }
     }
     display: flex;
@@ -33,11 +36,20 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 3rem 2rem;
+    padding: 0 2rem;
     margin-top: 2rem;
 
 
     .member_desc {
+        h3 {
+            padding-bottom: 1rem;
+        }
+        p {
+            font-size: 1.1rem;
+        }
+        .interest-desc p {
+            line-height: 2;
+        }
 
     // to center the desc
         // display:flex;
